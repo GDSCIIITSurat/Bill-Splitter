@@ -1,2 +1,2 @@
 # Bill Splitter- Backend
-The backend is hosted on 
+The backend is hosted on https://bill-splitter-backend-iiits.herokuapp.com/api/v1/
