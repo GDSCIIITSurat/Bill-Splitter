@@ -1,0 +1,28 @@
+{
+  "name": "bill-splitter",
+  "version": "1.0.0",
+  "description": "1. Login Signup Frontend\r 2. Show Profile of Logged in User\r 3. Show User Friends.\r 4. Make different groups.\r 5. List of Expenses made in each group.\r 6. Add Expense Option which will open page to take details of expense.\r 7. Give option to select people to divide the money.\r 8. Divide the money between the selected users.\r 9. Send a mail to users who are supposed to pay the money.\r 10. Add a payment gateway via UPI.",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hetu1107/Bill-Splitter.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Hetu1107/Bill-Splitter/issues"
+  },
+  "homepage": "https://github.com/Hetu1107/Bill-Splitter#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.1",
+    "heroku": "^7.64.0",
+    "mongoose": "^6.6.4",
+    "nodemon": "^2.0.20"
+  }
+}
