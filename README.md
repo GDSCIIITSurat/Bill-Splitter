@@ -1,6 +1,6 @@
 <h1>Bill-Splitter html version</h1>
 
-Frontend(html+css+js) for this branch is hosted on: https://bill-spliiter-html.netlify.app/
+Frontend(html+css+js) for this branch is hosted on: https://bill-splitter-html.netlify.app/
 
 <h2>Installation</h2>
 
