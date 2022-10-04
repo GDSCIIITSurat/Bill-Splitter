@@ -1,4 +1,4 @@
-# Bill-Splitter
+<h1>Bill-Splitter</h1>
 
 # Basic Design
 1. Login Signup Frontend
@@ -21,7 +21,7 @@
 
 <br>
 
-## How to clone ?
+<h2>Installation</h2>
 1\. Fork The Repository.
 ```bash
 https://github.com/GDSCIIITSurat/Bill-Splitter
@@ -32,33 +32,9 @@ https://github.com/GDSCIIITSurat/Bill-Splitter
 ```bash
 git clone https://github.com/<username>/Bill-Splitter.git
 ```
-4\. Install dependencies.
-```bash
-npm install
-```
-5\. Change to frontend directory.
-```bash
-cd frontend
-```
-6\. Install dependencies.
-```bash
-npm install
+4\. Install dependencies based on the branch you want to work on. 
 ```
 <br>
-
-## Start the server
-1\. start backend server.
-```bash
-npm start
-```
-2\. change directory to frontend.
-```bash
-cd frontend
-```
-3\. start react frontend
-```bash
-npm start
-```
 
 <br>
 
