@@ -1,7 +1,9 @@
-# Bill Splitter- Backend
+<h1> Bill Splitter- Backend </h1>
+
 The backend is hosted on https://bill-splitter-backend-iiits.herokuapp.com/api/v1/
 
-## How to clone ?
+<h2> Installation </h2>
+
 1\. Fork The Repository.
 ```bash
 https://github.com/GDSCIIITSurat/Bill-Splitter
@@ -22,7 +24,7 @@ npm install
 1\. start backend server.
 ```bash
 npm start
-``
+```
 <br>
 
 # Code Contribution
