@@ -1,7 +1,9 @@
 <h1>Bill-Splitter html version</h1>
+
 Frontend(html+css+js) for this branch is hosted on: https://bill-spliiter-html.netlify.app/
 
 <h2>Installation</h2>
+
 1\. Fork The Repository.
 ```bash
 https://github.com/GDSCIIITSurat/Bill-Splitter
