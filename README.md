@@ -1,7 +1,7 @@
-# Bill Spliiter Frontend React 
+<h1>Bill Spliiter Frontend React</h1>
 Frontend(React) for this branch is deployed on: https://euphonious-duckanoo-92c62a.netlify.app/
 
-## How to clone ?
+<h2>Installation</h2>
 1\. Fork The Repository.
 ```bash
 https://github.com/GDSCIIITSurat/Bill-Splitter
