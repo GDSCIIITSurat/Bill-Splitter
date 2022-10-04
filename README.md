@@ -49,7 +49,7 @@ https://github.com/GDSCIIITSurat/Bill-Splitter
 git clone https://github.com/<username>/Bill-Splitter.git
 ```
 4\. Install dependencies based on the branch you want to work on. 
-```
+
 <br>
 
 <br>
