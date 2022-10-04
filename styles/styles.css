@@ -1,0 +1,22 @@
+.title {
+    text-align: center;
+}
+
+.auth-container{
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgb(180, 180, 180);
+    margin: 0 auto;
+    padding: 20px;
+    width: 400px;
+}
+
+input[type=text], input[type=password], input[type=email] {
+    border-radius: 25px;
+    width: 100%;
+  }
+
+input[type=submit]{
+    border-radius: 25px;
+}
