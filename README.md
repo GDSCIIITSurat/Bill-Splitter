@@ -21,7 +21,23 @@
 
 <br>
 
+<h2> Deployed URLS <h2/>
+
+1\. React Frontend.
+```bash
+https://bill-splitter-react.netlify.app/
+```
+2\. Html Frontend.
+```bash
+https://bill-splitter-html.netlify.app/
+```
+2\. Backend.
+```bash
+https://bill-splitter-backend-iiits.herokuapp.com/api/v1/
+```
+
 <h2>Installation</h2>
+
 1\. Fork The Repository.
 ```bash
 https://github.com/GDSCIIITSurat/Bill-Splitter
