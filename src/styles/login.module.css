@@ -1,0 +1,91 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginpic {
+    width: 50%;
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+}
+
+.input_form {
+    display: flex;
+    justify-content: center;
+}
+
+.user_email_password {
+    padding: 15px;
+    width: 90%;
+    background-color: white;
+    border: 1px solid #dadce0;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    font-size: 12px;
+}
+
+.top_head {
+    font-size: 30px;
+    font-family: Montserrat;
+    font-weight: 700;
+    color: black;
+    margin: 20px;
+    text-align: center;
+}
+
+
+@media only screen and (min-width: 700px) {
+    .loginpic {
+        width: 40%;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .user_email_password {
+        padding: 25px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        font-size: 15px;
+    }
+
+    .submit_btn {
+        font-size: 10px;
+    }
+}
+
+
+
+.submit_btn {
+    background-image: linear-gradient(to right, #212B6C 0%, #3747aa 51%, #212B6C 100%);
+    margin: 10px;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+    cursor: pointer;
+    font-family: Montserrat;
+    font-size: 17px;
+}
+
+.submit_btn:hover {
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
+}
