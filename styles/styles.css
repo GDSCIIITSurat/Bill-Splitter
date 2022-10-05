@@ -1,22 +1,66 @@
 .title {
     text-align: center;
+    color: #E94560;
 }
 
+body{
+    
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 90vh;
+    padding: 1rem;
+    align-items: center;
+    
+}
+
+.body{
+    background-color: #182747;
+}
+
+.box{
+    width: 60%;
+}
 .auth-container{
-    background-color: rgb(255, 255, 255);
+    background-color: #FAF9F6;
     border: 2px solid rgb(255, 255, 255);
     border-radius: 15px;
     box-shadow: 0 0 20px rgb(180, 180, 180);
-    margin: 0 auto;
+    margin: 0rem auto;
     padding: 20px;
-    width: 400px;
+    width: 60%;
+}
+
+#button{
+    font-weight: bolder;
+    border-color: none;
+    color: #DCD6F7;
+    background-color: #091ba2;
+}
+
+#button:hover{
+    background-color: #DCD6F7;
+    color: #091ba2;
 }
 
 input[type=text], input[type=password], input[type=email] {
     border-radius: 25px;
     width: 100%;
-  }
+    border:1px solid black;
+}
 
 input[type=submit]{
-    border-radius: 25px;
+    border-radius: 1rem;
+}
+
+@media(max-width:840px){
+    .box{
+       width: 75%; 
+    }
+}
+
+@media(max-width:420px){
+    .box{
+        width: 120%; 
+     }
 }
