@@ -5,7 +5,6 @@ const {
   signUp
 } = require('../controllers/Signup,login')
 
-
 router.route('/signup').post(signUp)
 
 
