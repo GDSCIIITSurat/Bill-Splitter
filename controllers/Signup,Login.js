@@ -22,7 +22,22 @@ const signUp = asyncWrapper(async (req, res, next) => {
   res.json({ status: "ok" });
 });
 
+const logIn = asyncWrapper(async (req, res, next) => {
+  const { email, password } = req.body;
+  const task = await Coustmer.findOne({ email }).lean();
+  if (!task) {
+    return res.json({ status: "Invalid Username/Password"});
+  }
+  const check = await bcrypt.compare(password, task.password);
+  if (check) {
+    return res.json({ status: "Logged In"});
+  }else{
+    return res.json({status :"Invalid Username/Password"});
+  }
+});
+
 
 module.exports = {
   signUp,
+  logIn,
 };
