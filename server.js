@@ -1,23 +1,31 @@
-require('dotenv').config({path : "./config.env"});
-const express = require('express');
-
+const express = require("express");
 const app = express();
-const cors = require('cors');
-const connectDB = require('./config/db');
-const corsOptions ={
-    origin:'*', 
-    credentials:true,            
-    optionSuccessStatus:200,
-}
-const PORT = process.env.PORT || 5000;
+const routes = require("./routes/Routes");
+const connectDB = require("./db/connect");
+require("dotenv").config();
+const notFound = require("./middleware/not-found");
+const errorHandlerMiddleware = require("./middleware/error-handler");
 
-connectDB();
-// middleware to parse json 
+
 app.use(express.json());
-app.use(cors({}));
 
-app.use("/api/v1",require("./routes/index"))
 
-app.listen(PORT,()=>{
-    console.log(`server is running on port ${PORT}`);
-});
+
+app.use("/", routes);
+
+app.use(notFound);
+app.use(errorHandlerMiddleware);
+const port = process.env.PORT || 5000;
+
+const start = async () => {
+  try {
+    await connectDB(process.env.MONGO_URI);
+    app.listen(port, () =>
+      console.log(`Server is listening on port ${port}...`)
+    );
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+start();
