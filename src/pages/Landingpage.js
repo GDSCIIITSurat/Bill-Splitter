@@ -8,6 +8,9 @@ function Landingpage() {
             <Link to='/login'>
                 click me !
             </Link>
+            <Link to='/profile'>
+                profile!
+            </Link>
         </>
     )
 }
