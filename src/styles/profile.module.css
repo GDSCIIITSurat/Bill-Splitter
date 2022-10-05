@@ -1,0 +1,212 @@
+.data_box {
+    display: flex;
+    width: 90%;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 15px;
+    margin: auto;
+    margin-top: 10px;
+    padding: 7px;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.recent_pay_head {
+    font-family: Montserrat;
+    text-align: center;
+}
+
+.hr {
+    color: black;
+    width: 100%;
+    height: 1px;
+    background-color: black;
+    font-size: 20px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.friends_head {
+    font-family: Montserrat;
+    text-align: center;
+}
+
+.img {
+    width: 20%;
+}
+
+.box_name {
+    color: rgb(0, 0, 0);
+    width: 60%;
+    font-size: 20px;
+    background-color: transparent;
+}
+
+.pay_data {
+    color: rgb(0, 0, 0);
+    margin-left: 20px;
+    font-size: 20px;
+
+    padding: 10px;
+}
+
+.user_name {
+    font-family: Montserrat;
+    font-size: 23px;
+}
+
+.profile_img {
+    width: 50px;
+    object-fit: contain;
+}
+
+.pay_img {
+    width: 80px;
+    object-fit: contain;
+}
+
+.user_data_box {
+    display: flex;
+    font-family: Montserrat;
+
+    margin-bottom: 10px;
+
+}
+
+.info_data_box {
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    width: 80%;
+    margin-left: 10px;
+    padding-left: 10px;
+    border-radius: 5px;
+
+}
+
+.info_data {
+    margin-left: 10px;
+    width: 15%;
+
+}
+
+.photo {
+
+    width: 250px;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+.name {
+    font-family: Montserrat;
+    font-weight: 600;
+    background-color: white;
+    font-size: 20px;
+}
+
+.box_right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 400px;
+    align-items: center;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    gap: 10px;
+    border-radius: 10px 10px 10px 10px;
+    padding: 25px 0;
+    margin: 0 15px;
+}
+
+
+
+
+
+.personal_head {
+    font-family: Montserrat;
+}
+
+.cont_1 {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.box_left {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    width: 60%;
+    border-radius: 10px 10px 10px 10px;
+    background-color: white;
+    padding: 40px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 500px) {
+    .cont_1 {
+        flex-direction: column;
+    }
+
+    .box_left {
+        width: 100%;
+    }
+
+    .info_data_box {
+        width: 70%;
+        justify-content: space-between;
+    }
+
+    .info_data {
+        font-size: 15px;
+    }
+
+    .user_info_data {
+        font-size: 15px;
+    }
+
+    .box_right {
+        margin: 0px;
+    }
+
+    .user_info_data {
+        font-size: 15px;
+    }
+
+    .recent_pay_head {
+        font-size: 20px;
+        margin-top: 25px;
+    }
+
+    .pay_data {
+        font-size: 15px;
+    }
+
+    .data_box {
+        justify-content: space-around;
+    }
+
+    .pay_img {
+        width: 50px;
+        object-fit: contain;
+    }
+
+    .name {
+        width: 70%;
+    }
+
+    .box_name {
+        font-size: 20px;
+    }
+
+    .user_data_box {
+        justify-content: space-between;
+    }
+}
