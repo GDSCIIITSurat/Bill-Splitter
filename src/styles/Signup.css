@@ -12,9 +12,7 @@ TextField,.Signup-button{
     height: 5vh;
     padding: 6px;
 }
-.fields{
-    margin-top: 5px;
-}
+
 .Signup-button{
     width: 15vw;
     
@@ -30,8 +28,26 @@ TextField,.Signup-button{
     justify-content: center;
     align-items: center;
 }
-img{
+.signup-image{
     position: relative;
     top: 6vh;
     height: 58vh;
+}
+@media screen and (max-width:692px) {
+    .signup-image{
+        height: 25vh;
+    }
+    .App{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #Signup-form{
+        width: 50vw;
+    
+    }
+    /* .Signup-p{
+        font-size: 100vw;
+    } */
 }
