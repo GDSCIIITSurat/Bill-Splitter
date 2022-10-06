@@ -32,7 +32,8 @@ const logIn = asyncWrapper(async (req, res, next) => {
     return res.json({ status: "Invalid Username/Password" });
   }
   const check = await bcrypt.compare(password, task.password);
-  if (check) {
+  const confirm = await bcrypt.compare(req.body.confirmpassword, task.password);
+  if (check && confirm) {
     const token = jwt.sign(
       {
         id: task._id,
