@@ -1,6 +1,8 @@
 const Coustmer = require("../models/Coustmer");
 const asyncWrapper = require("../middleware/async");
 const bcrypt = require("bcrypt");
+const jwt = require("jsonwebtoken");
+const JWT_SECRET = 'sdjkfh8923yhjdksbfma@#(&@!^#&@bhjb2qiuhesdbhjdsfg839ujkdhfjk'
 
 const signUp = asyncWrapper(async (req, res, next) => {
   const { name, email, password: plainTextPassword, contactNumber } = req.body;
@@ -24,18 +26,25 @@ const signUp = asyncWrapper(async (req, res, next) => {
 
 const logIn = asyncWrapper(async (req, res, next) => {
   const { email, password } = req.body;
+
   const task = await Coustmer.findOne({ email }).lean();
   if (!task) {
-    return res.json({ status: "Invalid Username/Password"});
+    return res.json({ status: "Invalid Username/Password" });
   }
   const check = await bcrypt.compare(password, task.password);
   if (check) {
-    return res.json({ status: "Logged In"});
-  }else{
-    return res.json({status :"Invalid Username/Password"});
+    const token = jwt.sign(
+      {
+        id: task._id,
+        email: task.email,
+      },
+      JWT_SECRET
+    );
+    return res.json({ status: "Logged In", data: token, task });
+  } else {
+    return res.json({ status: "Invalid Username/Password" });
   }
 });
-
 
 module.exports = {
   signUp,
