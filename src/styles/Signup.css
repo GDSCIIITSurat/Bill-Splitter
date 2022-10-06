@@ -1,0 +1,53 @@
+#Signup-form{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    width: 31vw;
+    height: 89vh;
+}
+TextField,.Signup-button{
+    width: 30vw;
+    margin: 8px;
+    height: 5vh;
+    padding: 6px;
+}
+
+.Signup-button{
+    width: 15vw;
+    
+}
+#Signup-p{
+    font-size: 5vw;
+    height: 10vh;
+    letter-spacing: 4px;
+    color: #1976d2;
+}
+.App{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.signup-image{
+    position: relative;
+    top: 6vh;
+    height: 58vh;
+}
+@media screen and (max-width:692px) {
+    .signup-image{
+        height: 25vh;
+    }
+    .App{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #Signup-form{
+        width: 50vw;
+    
+    }
+    /* .Signup-p{
+        font-size: 100vw;
+    } */
+}

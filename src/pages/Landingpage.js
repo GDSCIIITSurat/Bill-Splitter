@@ -11,6 +11,9 @@ function Landingpage() {
             <Link to='/profile'>
                 profile!
             </Link>
+            <Link to='/signup'>
+                Signup
+            </Link>
         </>
     )
 }
