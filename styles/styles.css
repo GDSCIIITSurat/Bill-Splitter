@@ -27,6 +27,10 @@ header {
     background-color: #ffffff00;
 }
 
+br {
+    
+}
+
 .description {
     color: #e6e6e6;
     font-size: large;
@@ -36,6 +40,12 @@ header {
     justify-content: center;
     align-items: center;
     background-color: #ffffff00;
+}
+
+.center {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .logo {
@@ -98,6 +108,77 @@ header {
     margin: 0rem auto;
     padding: 20px;
     width: 60%;
+}
+
+.avatar {
+    width: 40%;
+    height: 40%;
+    border-radius: 50%;
+}
+
+
+.profile-box-right {
+    width: 50%;
+    float: left;
+    padding: 20px;
+    
+    text-align: center;
+}
+
+.profile-box-left {
+    width: 50%;
+    float: left;
+    text-align: left;
+}
+
+.profile-list {
+    list-style: none;
+}
+
+.payment {
+    background-color: #e1e1e1;
+    border-radius: 15px;
+    color: black;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 5%;
+    padding: 10px;
+    align-items: center;
+}
+
+.personal-info {
+    color: black;
+
+    justify-content: left;
+    height: 5%;
+    padding: 5px 10px 25px 30px;
+    align-items: left;
+}
+
+.payment:hover{
+    background-color: #f3f3f3;
+}
+
+.friends {
+    background-color: #e1e1e1;
+    border-radius: 15px;
+    color: black;
+    display: flex;
+    height: 5%;
+    align-items: center;
+}
+
+.friend-name {
+    padding-top: 10px;
+    font-size: 25px
+}
+
+.avatar-friend {
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+    padding: 20px 20px 20px 20px;
 }
 
 #button{
