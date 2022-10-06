@@ -22,7 +22,7 @@ function Signup(){
         setMail("")
     }
     return <div className="App">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSH9BZD6iMPDJTb-obK1EgTuB9EIO4sZ6FVZs8US_OhiBmDizEwigp1ruMS9835BvSBTX0&usqp=CAU"/>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSH9BZD6iMPDJTb-obK1EgTuB9EIO4sZ6FVZs8US_OhiBmDizEwigp1ruMS9835BvSBTX0&usqp=CAU" alt=""/>
 
         <form onSubmit={(e)=> e.preventDefault()} id="Signup-form">
 
