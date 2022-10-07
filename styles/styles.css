@@ -156,6 +156,12 @@ br {
     align-items: left;
 }
 
+.personal-info-field {
+    background-color: #e1e1e1;
+    padding: 10px;
+    border-radius: 15px;
+}
+
 .payment:hover{
     background-color: #f3f3f3;
 }
