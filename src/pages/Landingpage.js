@@ -12,7 +12,6 @@ function Landingpage() {
     console.log(padding)
     return (
         <>
-<<<<<<< HEAD
         <div style={{backgroundImage:`url(bg.png)`,paddingBottom:`${padding/3}px`}} className={styles.background_img}>
             <div className={styles.upper_box}>
                 <div className={styles.right_box}>
@@ -39,19 +38,6 @@ function Landingpage() {
                 </div>
             </div>
             </div>
-=======
-            <h1>Welcome to the Bill Splitter App!</h1>
-            <h4>Let's get started</h4>
-            <Link to='/login'>
-                click me !
-            </Link>
-            <Link to='/profile'>
-                profile!
-            </Link>
-            <Link to='/signup'>
-                Signup
-            </Link>
->>>>>>> e9c1f1a15518cc3b8e1a7c60d3c6976f4931808e
         </>
     )
 }
