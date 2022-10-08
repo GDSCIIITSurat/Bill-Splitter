@@ -1,53 +1,52 @@
-#Signup-form{
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    justify-content: center;
-    width: 31vw;
-    height: 89vh;
-}
-TextField,.Signup-button{
-    width: 30vw;
-    margin: 8px;
-    height: 5vh;
-    padding: 6px;
-}
+#customSection {
+    min-height: 100vh;
+    background: rgb(9,9,121);
+    background: linear-gradient(45deg, rgba(9,9,121,1) 0%, rgba(57,57,180,0.9738489145658263) 22%, rgba(121,153,199,1) 51%, rgba(57,57,180,0.9738489145658263) 77%, rgba(9,9,121,1) 100%);
+  }
+  
+  
+  @media (min-width: 801px){
+    #customCard {
+      max-width: 65%;
+      box-shadow: 0px 0px 30px black;
+      font-family: Geneva,Tahoma,Verdana,sans-serif;
+      background: rgb(252,252,254);
+      background: linear-gradient(-45deg, rgba(252,252,254,0.9878545168067226) 10%, rgba(228,228,231,1) 50%, rgba(252,252,254,1) 90%);
+    }
+  }
+  
+  @media (min-width:501px) and (max-width: 900px) {
+    #customCard {
+      max-width: 75%;
+      box-shadow: 0px 0px 30px black;
+      font-family: Geneva,Tahoma,Verdana,sans-serif;
+      background: rgb(252,252,254);
+      background: linear-gradient(-45deg, rgba(252,252,254,0.9878545168067226) 10%, rgba(228,228,231,1) 50%, rgba(252,252,254,1) 90%);
+    }
+  }
+  
+  @media (max-width: 500px){
+    #customCard {
+      max-width: 85%;
+      box-shadow: 0px 0px 30px black;
+      font-family: Geneva,Tahoma,Verdana,sans-serif;
+      background: rgb(252,252,254);
+      background: linear-gradient(-45deg, rgba(252,252,254,0.9878545168067226) 10%, rgba(228,228,231,1) 50%, rgba(252,252,254,1) 90%);
+    }
+  }
+  
+  #customCard > div > h2 {
+    font-family: Georgia,Times,Times New Roman,serif; 
+    font-weight: bold;
+  }
 
-.Signup-button{
-    width: 15vw;
-    
-}
-#Signup-p{
-    font-size: 5vw;
-    height: 10vh;
-    letter-spacing: 4px;
-    color: #1976d2;
-}
-.App{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.signup-image{
-    position: relative;
-    top: 6vh;
-    height: 58vh;
-}
-@media screen and (max-width:692px) {
-    .signup-image{
-        height: 25vh;
-    }
-    .App{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    #Signup-form{
-        width: 50vw;
-    
-    }
-    /* .Signup-p{
-        font-size: 100vw;
-    } */
-}
+  #customCard > hr {
+    border-top: 4px solid;
+    opacity: .30;
+    margin-bottom: 3vh;
+  }
+  
+  #customBtn{
+    border-radius: 25px;
+    padding: 10px 50px;
+  }
