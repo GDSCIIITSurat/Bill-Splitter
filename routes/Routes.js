@@ -7,7 +7,7 @@ const {
 } = require('../controllers/Signup,login')
 
 router.route('/signup').post(signUp)
-router.route('/login').get(logIn)
+router.route('/login').post(logIn)
 
 
 module.exports = router

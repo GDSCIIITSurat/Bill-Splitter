@@ -4,14 +4,12 @@ const CoustmerSchema = new mongoose.Schema({
   name: {
     type: String,
     required: [true, "must provide name(s)"],
-    unique:true,
     trim: true,
-    maxlength: [1000, "name can not be more than 20 characters"],
+    maxlength: [50 , "name can not be more than 50 characters"],
   },
   contactNumber: {
     type: Number,
     required: [true, "must provide contactNumber"],
-    unique:true,
     trim: true,
   },
   email: {
@@ -25,7 +23,6 @@ const CoustmerSchema = new mongoose.Schema({
     required: [true, "must provide password"],
     trim: true,
     minlength: [6, "min length should be 6 letters"],
-    maxlength: [1000, "name can not be more than 20 characters"],
   },
 });
 

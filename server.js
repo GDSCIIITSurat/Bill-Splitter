@@ -5,17 +5,13 @@ const connectDB = require("./db/connect");
 require("dotenv").config();
 const notFound = require("./middleware/not-found");
 const errorHandlerMiddleware = require("./middleware/error-handler");
-
+const port = process.env.PORT || 5000;
 
 app.use(express.json());
 
-
-
-app.use("/", routes);
-
+app.use("/api/v1", routes);
 app.use(notFound);
 app.use(errorHandlerMiddleware);
-const port = process.env.PORT || 5000;
 
 const start = async () => {
   try {
