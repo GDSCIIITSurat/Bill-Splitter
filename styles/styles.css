@@ -27,10 +27,6 @@ header {
     background-color: #ffffff00;
 }
 
-br {
-    
-}
-
 .description {
     color: #e6e6e6;
     font-size: large;
@@ -74,11 +70,9 @@ br {
 
 .title {
     text-align: center;
-}
-
-.title {
-    text-align: center;
-    color: #E94560;
+    color: rgb(245, 244, 244);
+    letter-spacing: 0.6vw;
+    font-size: 5vw;
 }
 
 .box{
@@ -91,7 +85,7 @@ br {
 }
 
 .auth-body {
-    background-color: #182747;
+    background: linear-gradient(90deg, rgba(0,75,136,1) 0%, rgba(0,180,169,1) 100%);
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -107,7 +101,7 @@ br {
     box-shadow: 0 0 20px rgb(180, 180, 180);
     margin: 0rem auto;
     padding: 20px;
-    width: 60%;
+    width: 70%;
 }
 
 .avatar {
@@ -202,9 +196,11 @@ br {
 }
 
 input[type=text], input[type=password], input[type=email] {
-    border-radius: 25px;
+    border-radius: 10px;
     width: 100%;
-    border:1px solid black;
+    border:1px solid rgb(145, 141, 141);
+    padding-left: 1.5%;
+    height: 7vh;
 }
 
 input[type=submit]{
