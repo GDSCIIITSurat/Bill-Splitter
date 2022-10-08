@@ -72,7 +72,7 @@ header {
     text-align: center;
     color: rgb(245, 244, 244);
     letter-spacing: 0.6vw;
-    font-size: 5vw;
+    font-size: 3.2vw;
 }
 
 .box{
@@ -89,7 +89,7 @@ header {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    height: 90vh;
+    height: 100vh;
     padding: 1rem;
     align-items: center;
 }
@@ -195,7 +195,7 @@ header {
     color: #091ba2;
 }
 
-input[type=text], input[type=password], input[type=email] {
+input[type=text], input[type=password], input[type=email],input[type=phone] {
     border-radius: 10px;
     width: 100%;
     border:1px solid rgb(145, 141, 141);
@@ -213,8 +213,11 @@ input[type=submit]{
     }
 }
 
-@media(max-width:420px){
+@media(max-width:650px){
     .box{
         width: 120%; 
+     }
+     .title{
+        font-size: 8vw;
      }
 }
