@@ -2,36 +2,37 @@ const Coustmer = require("../models/Coustmer");
 const asyncWrapper = require("../middleware/async");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
-const JWT_SECRET = 'sdjkfh8923yhjdksbfma@#(&@!^#&@bhjb2qiuhesdbhjdsfg839ujkdhfjk'
 
 const signUp = asyncWrapper(async (req, res, next) => {
   const { name, email, password: plainTextPassword, contactNumber, confirmPassword } = req.body;
   const password = await bcrypt.hash(plainTextPassword, 10);
 
-  const isAccountPresent = await Coustmer.findOne({ email }).lean();
+  const isAccountPresent = await Coustmer.findOne({ email });
+  
   if(isAccountPresent){
     return res.status(403).json({msg : "User Already exists."})
   }
+  else{
+    if(await bcrypt.compare(confirmPassword, password)){
+      const Create = async () => {
+        try {
+          const response = await Coustmer.create({
+            name,
+            email,
+            password,
+            contactNumber,
+          });
+          console.log("User created successfully: ", response);
+        } catch (err) {
+          console.log(err);
+        }
+      };
 
-  if(await bcrypt.compare(confirmPassword, password)){
-    const Create = async () => {
-      try {
-        const response = await Coustmer.create({
-          name,
-          email,
-          password,
-          contactNumber,
-        });
-        console.log("User created successfully: ", response);
-      } catch (err) {
-        console.log(err);
-      }
-    };
-
-    Create();
-    res.status(201).json({status : "ok"});
+      Create();
+      res.status(201).json({status : "ok"});
+    }
+    else res.status(401).json({msg:"Password and confirmPassword does not match."})
   }
-  else res.status(401).json({msg:"Password and confirmPassword does not match."})
 });
 
 const logIn = asyncWrapper(async (req, res, next) => {
