@@ -1,7 +1,9 @@
 import React from 'react'
 import style from "../styles/profile.module.css"
+import { useNavigate } from "react-router-dom";
 
 function Profile() {
+  let navigate = useNavigate();
   const friends_data = [
     "Jitanshu",
     "Ankit",
@@ -94,7 +96,10 @@ function Profile() {
             </div>
             {
               payment_data.map((ele) => {
-                return (<div className={style.data_box}>
+                return (<div className={style.data_box} onClick={()=>{
+                  navigate("/expence")
+                  //also pass group name in navigate for fetch info of group
+                }}>
                   <div className={style.img}>
                     <img src="check.jpg" alt="Profile Pic" className={style.pay_img} />
                   </div>
