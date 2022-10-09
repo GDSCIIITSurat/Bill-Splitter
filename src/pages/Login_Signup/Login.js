@@ -5,6 +5,7 @@ import style from "../../styles/login.module.css";
 function Login() {
   const [email, setemail] = useState("");
   const [password, setpassword] = useState("");
+  const [valid, setValid] = useState("d-none");
 
   const submit = () => {
     const info = { email, password };
@@ -12,8 +13,16 @@ function Login() {
 
     const PostInfo = async() => {
       await axios.post(url, info)
-      .then(() => window.alert("Success"))
-      .catch((e) => console.log(e));
+      .then(() => {
+        setValid("d-none");
+        window.alert("Success");
+      })
+      .catch((e) => {
+        if(e.response.status === 401){
+          setValid("d-inline-block")
+        }
+      });
+      
     }
     
     PostInfo();
@@ -45,6 +54,7 @@ function Login() {
               }}
               placeholder="Enter your password"
             />
+            <div className={`${valid} invalid-feedback`}>Invalid UserName or Password!!!</div>
           </div>
           <button type="submit" className={style.submit_btn} onClick={submit}>
             Login

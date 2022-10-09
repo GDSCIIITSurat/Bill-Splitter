@@ -16,7 +16,13 @@
 
 .input_form {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+}
+
+.input_form div{
+    padding: 0px 20px;
+    font-weight: bolder;
 }
 
 .user_email_password {
