@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import axios from 'axios';
 import style from "../../styles/login.module.css";
 
 function Login() {
@@ -6,8 +7,16 @@ function Login() {
   const [password, setpassword] = useState("");
 
   const submit = () => {
-    console.log(email);
-    console.log(password);
+    const info = { email, password };
+    const url = "https://bill-splitter-backend-iiits.herokuapp.com/api/v1/login"
+
+    const PostInfo = async() => {
+      await axios.post(url, info)
+      .then(() => window.alert("Success"))
+      .catch((e) => console.log(e));
+    }
+    
+    PostInfo();
   };
 
   return (
@@ -21,18 +30,16 @@ function Login() {
             <input
               type="email"
               className={style.user_email_password}
-              id="exampleFormControlInput1"
               onChange={(e) => {
                 setemail(e.target.value);
               }}
-              placeholder="Enter your user ID"
+              placeholder="Enter your email_Id"
             />
           </div>
           <div className={style.input_form}>
             <input
               type="password"
-              class={style.user_email_password}
-              id="exampleFormControlInput1"
+              className={style.user_email_password}
               onChange={(e) => {
                 setpassword(e.target.value);
               }}
