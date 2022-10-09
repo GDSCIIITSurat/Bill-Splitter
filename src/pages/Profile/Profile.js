@@ -1,7 +1,9 @@
 import React from "react";
 import style from "../../styles/profile.module.css";
+import { useNavigate } from "react-router-dom";
 
 function Profile() {
+  let navigate = useNavigate();
   const friends_data = ["Jitanshu", "Ankit", "Utsav"];
 
   const user_data = {
@@ -91,9 +93,12 @@ function Profile() {
               <hr className={style.hr} />
               <h1 className={style.recent_pay_head}>Recent payment info</h1>
             </div>
-            {payment_data.map((ele) => {
-              return (
-                <div className={style.data_box}>
+            {
+              payment_data.map((ele) => {
+                return (<div className={style.data_box} onClick={()=>{
+                  navigate("/expence")
+                  //also pass group name in navigate for fetch info of group
+                }}>
                   <div className={style.img}>
                     <img
                       src="check.jpg"

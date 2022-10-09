@@ -1,0 +1,176 @@
+
+.user_data_box {
+    display: flex;
+    font-family: Montserrat;
+    align-items: center;
+    margin-bottom: 10px;
+
+}
+
+.info_data_box {
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    width: 80%;
+    margin-left: 10px;
+    padding: 20px;
+    border-radius: 5px;
+
+}
+
+.info_data {
+    margin-left: 10px;
+    width: 25%;
+
+}
+
+.grp_head {
+    font-family: Montserrat;
+    font-size: 40px;
+    text-align: center;
+}
+
+.grp_date {
+    font-family: Montserrat;
+    font-size: 25px;
+    text-align: center;
+    padding: 10px;
+}
+
+.status {
+    font-family: Montserrat;
+    font-size: 25px;
+    text-align: center;
+    padding: 10px;
+}
+
+.main_cont_box {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+
+}
+
+.left_box {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 15px;
+    padding: 20px;
+}
+
+.detail_box {
+    font-family: Montserrat;
+}
+
+.right_box {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 15px;
+    padding: 20px;
+}
+
+.contributer {
+    display: flex;
+    flex-direction: column;
+
+
+    margin-top: 50px;
+
+
+}
+
+.contr_detail_box {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.contributer_name {
+    font-family: Montserrat;
+    font-size: 15px;
+}
+
+.status_head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.check {
+    width: 50px;
+    border-radius: 50%;
+    object-fit: contain;
+}
+
+.contributer_pay {
+    font-family: Montserrat;
+    font-size: 15px;
+}
+
+.contr_img {
+    width: 150px;
+    object-fit: contain;
+}
+
+.contributer_box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    margin: 10px;
+}
+
+@media only screen and (max-width: 500px) {
+    .user_data_box {
+        justify-content: space-between;
+    }
+
+    .user_info_data {
+        font-size: 15px;
+    }
+
+    .info_data {
+        font-size: 15px;
+    }
+
+    .user_info_data {
+        font-size: 15px;
+    }
+
+    .main_cont_box {
+        flex-direction: column-reverse;
+    }
+
+    .right_box {
+        width: 90%;
+        margin: auto;
+        margin-top: 20px;
+    }
+
+    .left_box {
+        width: 90%;
+        margin: auto;
+        margin-top: 20px;
+    }
+
+    .contr_detail_box {
+        justify-content: center;
+    }
+
+    .detail_box {
+        font-size: 25px;
+    }
+
+    .grp_date {
+        font-size: 15px;
+    }
+
+    .status {
+        font-size: 15px;
+    }
+
+    .check {
+        width: 30px;
+    }
+}
