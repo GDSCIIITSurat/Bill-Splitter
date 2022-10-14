@@ -39,6 +39,12 @@ header {
     background-color: #ffffff00;
 }
 
+.center {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
 .logo {
     font-size: 44px;
     font-weight: bold;
@@ -66,11 +72,9 @@ header {
 
 .title {
     text-align: center;
-}
-
-.title {
-    text-align: center;
-    color: #E94560;
+    color: rgb(245, 244, 244);
+    letter-spacing: 0.6vw;
+    font-size: 3.2vw;
 }
 
 .box{
@@ -95,11 +99,11 @@ header {
     font-size: x-large;
 }
 .auth-body {
-    background-color: #182747;
+    background: linear-gradient(90deg, rgba(0,75,136,1) 0%, rgba(0,180,169,1) 100%);
     display: flex;
     justify-content: center;
     flex-direction: column;
-    height: 90vh;
+    height: 100vh;
     padding: 1rem;
     align-items: center;
 }
@@ -111,7 +115,104 @@ header {
     box-shadow: 0 0 20px rgb(180, 180, 180);
     margin: 0rem auto;
     padding: 20px;
-    width: 60%;
+    width: 70%;
+}
+
+.avatar {
+    width: 40%;
+    height: 40%;
+    border-radius: 50%;
+}
+
+
+.profile-box-right {
+    width: 50%;
+    float: left;
+    padding: 20px;
+    
+    text-align: center;
+}
+
+.profile-box-left {
+    width: 50%;
+    float: left;
+    text-align: left;
+}
+
+.profile-list {
+    list-style: none;
+}
+
+.payment {
+    background-color: #e1e1e1;
+    border-radius: 15px;
+    color: black;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 5%;
+    padding: 10px;
+    align-items: center;
+}
+
+.personal-info {
+    color: black;
+
+    justify-content: left;
+    height: 5%;
+    padding: 5px 10px 25px 30px;
+    align-items: left;
+}
+
+.personal-info-field {
+    background-color: #e1e1e1;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.payment:hover{
+    background-color: #f3f3f3;
+}
+
+.friends {
+    background-color: #e1e1e1;
+    border-radius: 15px;
+    justify-content: left;
+    flex-direction: column;
+    color: black;
+    display: flex;
+    height: 5%;
+    align-items: center;
+}
+
+.friend-name {
+    padding-top: 10px;
+    font-size: 25px
+}
+
+.avatar-friend {
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+    padding: 20px 20px 20px 20px;
+}
+
+.item-list {
+    list-style: none;
+    background-color: #e1e1e1;
+    border-radius: 15px;
+    color: black;
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    height: 5%;
+    padding: 10px;
+    align-items: left;
+}
+
+.item-field {
+    color: #000000;
+    text-align: left;
 }
 
 #button{
@@ -126,10 +227,12 @@ header {
     color: #091ba2;
 }
 
-input[type=text], input[type=password], input[type=email] {
-    border-radius: 25px;
+input[type=text], input[type=password], input[type=email],input[type=phone] {
+    border-radius: 10px;
     width: 100%;
-    border:1px solid black;
+    border:1px solid rgb(145, 141, 141);
+    padding-left: 1.5%;
+    height: 7vh;
 }
 
 input[type=submit]{
@@ -142,8 +245,11 @@ input[type=submit]{
     }
 }
 
-@media(max-width:420px){
+@media(max-width:650px){
     .box{
         width: 120%; 
+     }
+     .title{
+        font-size: 8vw;
      }
 }
