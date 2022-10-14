@@ -33,6 +33,11 @@ function Landingpage() {
                 <p className={styles.text_box}>Login</p>
               </Link>
             </div>
+            <div className={styles.login}>
+              <Link to="/faq">
+                <p className={styles.text_box}>FAQs</p>
+              </Link>
+            </div>
           </div>
         </div>
         <div className={styles.lower_box}>
