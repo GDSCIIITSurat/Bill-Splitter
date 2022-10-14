@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Andada+Pro:ital@1&family=Ubuntu:wght@500&family=Lobster&family=Lato&family=Rubik:wght@500&display=swap');
 
 * {
     margin: 0;
@@ -8,8 +9,8 @@
 
 li, a, button {
     font-family: "Montserrat", sans-serif;
-    font-weight: 500;
-    font-size: 16px;
+    font-weight: bolder;
+    font-size: 17px;
     color: #e6e6e6;
     text-decoration: none;
 
@@ -39,7 +40,8 @@ header {
 }
 
 .logo {
-    font-size: 40px;
+    font-size: 44px;
+    font-weight: bold;
     color: #e6e6e6;
 }
 
@@ -80,6 +82,18 @@ header {
     background: linear-gradient(90deg, rgba(0,75,136,1) 0%, rgba(0,180,169,1) 100%); 
 }
 
+.describe {
+    padding-top: 2.5rem;
+    font-weight: bold;
+    margin: auto;
+    text-align: center;
+    /* color: rgb(223, 246, 255); */
+    /* color: #8be812; */
+    color: white;
+    text-shadow: 14px 7px 13px rgba(0, 3, 1, 0.785);
+    font-family: 'Lato';
+    font-size: x-large;
+}
 .auth-body {
     background-color: #182747;
     display: flex;
