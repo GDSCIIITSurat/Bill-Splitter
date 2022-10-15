@@ -6,25 +6,10 @@
     padding: 0;
     box-sizing: border-box;
 }
-
-li, a, button {
-    font-family: "Montserrat", sans-serif;
-    font-weight: bolder;
-    font-size: 17px;
-    color: #e6e6e6;
-    text-decoration: none;
-
-    background-color: #ffffff00;
-    padding: 10px 20px 10px 20px;
-    border: none;
-    text-decoration: none;
-}
-
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 10%;
     background-color: #ffffff00;
 }
 
@@ -46,27 +31,28 @@ header {
 }
 
 .logo {
-    font-size: 44px;
+    font-size: 35px;
     font-weight: bold;
     color: #e6e6e6;
 }
 
 .nav_links{
-    list-style: none;
-}
-
-.nav_links li {
-    display: inline-block;
-    padding: 0px 20px;
-}
-
-.nav_links li a {
     text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bolder;
+    font-size: 19px;
     color: #e6e6e6;
-    transition: all 0.3s ease 0s;
-}
+    text-decoration: none;
 
-.nav_links li a:hover{
+    background-color: #ffffff00;
+    padding: 10px 20px 10px 20px;
+    border: none;
+    text-decoration: none;
+}
+.picDiv{
+    height: 78vh;
+}
+.nav_links a:hover{
     color: rgb(185, 255, 255);
 }
 
@@ -77,6 +63,13 @@ header {
     font-size: 3.2vw;
 }
 
+.coverimg{
+    
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    opacity: 0.6;
+}
 .box{
     width: 60%;
 }
@@ -87,16 +80,58 @@ header {
 }
 
 .describe {
-    padding-top: 2.5rem;
-    font-weight: bold;
-    margin: auto;
+    position: relative;
+    background-image: url("https://images.unsplash.com/photo-1500316124030-4cffa46f10f0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");
+    background-size: cover;
+}
+.lato{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#pic_btn{
+    padding: 1.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    /* color: rgb(223, 246, 255); */
-    /* color: #8be812; */
-    color: white;
-    text-shadow: 14px 7px 13px rgba(0, 3, 1, 0.785);
-    font-family: 'Lato';
-    font-size: x-large;
+    height: 1rem;
+    color: black;
+    font-weight: bold;
+    background-color: #8BBCCC;
+    border-radius: 2.2rem;
+}
+
+#pic_btn:hover{
+    padding: 2rem;
+}
+
+.container{
+    height: 90vh;
+}
+
+.card {
+    border: none;
+    margin: auto;
+    margin-bottom: 3vh;
+    opacity: 0.9;
+    transition: transform 350ms ease;
+    border-radius: 18px;
+}
+
+.card:hover {
+    transform: scale(1.04);
+}
+
+.card-body{
+    color: rgb(36, 47, 155);
+}
+
+#demo{
+    color: rgb(36, 47, 155);
+    font-size: larger;
 }
 .auth-body {
     background: linear-gradient(90deg, rgba(0,75,136,1) 0%, rgba(0,180,169,1) 100%);
@@ -253,3 +288,4 @@ input[type=submit]{
         font-size: 8vw;
      }
 }
+
