@@ -9,16 +9,16 @@
 }
 .FAQ-container{
     width: 48vw;
-    /* background-color: aqua; */
+    
     height: 80vh;
     margin-top: 15vh;
     display: flex;
     flex-direction: column;
-    /* justify-content: space-evenly; */
+    
     overflow: auto;
 }
 .FAQ-details{
-    /* min-width: 3vw; */
+    
     color: rgba(1, 76, 238, 0.979);
     padding: 10px;
     border-bottom: 2px solid rgba(168, 154, 154, 0.651);
@@ -47,8 +47,8 @@
     }
 }
 .FAQ-disclaimer{
-    background-color: rgba(168, 154, 154, 0.651);
     padding: 5px;
-    font-size: 15px;
+    font-size: 50px;
     color: rgba(1, 76, 238, 0.979);
+    font-style: italic;
 }
