@@ -126,7 +126,7 @@ header {
 }
 
 .card-body{
-    color: rgb(36, 47, 155);
+    color: black;
 }
 
 #demo{
@@ -274,6 +274,35 @@ input[type=submit]{
     border-radius: 1rem;
 }
 
+
+.question{
+    font-weight: bolder;
+    font-size: large;
+    padding-bottom: 0.5rem;
+}
+
+.condet{
+    text-align: center;
+}
+
+.maicon{
+    font-weight: bold;
+}
+
+.bg-info-custom{
+    background-color: #8BBCCC;
+}
+
+.faq-body{
+    background: linear-gradient(90deg, rgba(0,75,136,1) 0%, rgba(0,180,169,1) 100%);
+}
+.container_custom {
+    color: wheat;
+    min-height: 100vh;
+    padding-top: 5vh;
+    padding-bottom: 10vh;
+    /* background-color: rgb(100, 111, 212); */
+}
 @media(max-width:840px){
     .box{
        width: 75%; 
