@@ -26,8 +26,20 @@ function validateFormData(password, confirmPassword, info) {
         };
         
         fetch(url, requestOptions)
-          .then(response => response.text())
-          .then(() => window.location.replace("login.html"))   //Redirect here
+          .then((res) => {
+            console.log(res);
+            if(res.status === 403){
+              window.alert("User already exists for this emailId. Try Login Instead.");
+              window.location.replace("register.html");
+            }
+            else if(res.status === 201){
+              window.alert("Registration successfully completed.");
+              window.location.replace("login.html");
+            }
+            else{
+              window.alert("error");
+            }
+          })
           .catch(error => console.log('error', error));
     };
 
