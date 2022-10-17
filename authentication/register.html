@@ -16,20 +16,24 @@
 
     <form class="box" id="registerForm">  
         <div class="auth-container">   
+            <p class="mb-3 fw-bold">Name </p> 
+            <input type="text" placeholder="Enter your name" id="name" name="name" required> <br> <br>
             <p class="mb-3 fw-bold">Email Address</p> 
-            <input type="email" placeholder="abc@xyz.com" id="register_Mail" name="email"  required> <br> <br>
-            <p class="mb-2 fw-bold">Contact </p>
-            <input type="phone" placeholder="XXXXXXXXXX" id="register_Pass" class="register-pass" name="password" required> <br> <br>
+            <input type="email" placeholder="abc@xyz.com" id="email" name="email" required> <br> <br>
+            <p class="mb-2 fw-bold">Contact No.</p>
+            <input type="phone" placeholder="Enter 10-digit Number" pattern="[0-9]{10}" id="contactNumber" name="phone" required> <br> <br>
             <p class="mb-2 fw-bold">Password</p>
-            <input type="password" placeholder="anxahd$123" id="register_Pass" class="register-pass" name="password" required> <br> <br>
+            <input type="password" placeholder="Your Password" id="password" class="register-pass form-control" name="password" required>
+            <div class="invalid-feedback">Password should be equal and greater than length 6.</div> <br> <br>
             <p class="mb-2 fw-bold">Confirm Password</p>
-            <input type="password" placeholder="******" name="password" id="register_Cpass" required> <br> <br>
+            <input type="password" placeholder="Re-enter your password" name="password" class="register-pass form-control" id="confirmPassword" required>
+            <div class="invalid-feedback">Password should be equal and greater than length 6.</div> <br> <br>
             
             <!-- Need to do something with the register button-->
             <div class="row justify-content-center">
-                <button id="button" type="submit"  class="col-6 btn btn-outline-primary">Register</button><br><br>
+                <button id="button" type="submit"  class="col-6 btn btn-outline-primary" >Register</button><br><br>
             </div>
-            <p>Already have an account? <a href="login.html">Login!</a></p>
+            <p class="my-3 text-center">Already have an account? <a href="login.html">Login!</a></p>
 
             
 
