@@ -1,0 +1,26 @@
+
+.container{
+    height: 90vh;
+}
+
+.card {
+    border: none;
+    margin: auto;
+    margin-bottom: 3vh;
+    opacity: 0.9;
+    transition: transform 350ms ease;
+    border-radius: 18px;
+}
+
+.card:hover {
+    transform: scale(1.04);
+}
+
+.card-body{
+    color: black;
+}
+
+#demo{
+    color: rgb(36, 47, 155);
+    font-size: larger;
+}

@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&family=Rubik:wght@500&display=swap");
 .upper_box {
     display: flex;
     justify-content: space-between;
@@ -12,16 +13,21 @@
     background-size: cover;
 }
 
+
 .header_h1 {
-    color: white;
+    font-family: 'Rubik', sans-serif;
+    /* color: white; */
+    color: #def2fa;
+    font-weight: bolder;
     margin-left: 20px;
 }
 
 .right_box {
-    margin-top: 30px;
+    /* margin-top: 30px; */
+    padding: 0.75rem;
     display: flex;
     justify-content: flex-start;
-    width: 40%;
+    /* width: 40%; */
 }
 
 .logo {
@@ -39,6 +45,7 @@
     background-image: linear-gradient(to right, #212B6C 0%, #3747aa 51%, #212B6C 100%);
     margin: 10px;
     padding: 15px 45px;
+    font-weight: bold;
     text-align: center;
     text-transform: uppercase;
     transition: 0.5s;
@@ -52,27 +59,36 @@
     font-size: 17px;
 }
 
+.text_box:hover{
+    font-size: 18px;
+}
+
+.lower_left{
+    padding-left: 0rem;
+    
+}
 .lower_box {
 
     display: flex;
-    width: 80%;
+    width: 90%;
     margin: auto;
     align-items: center;
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(7px);
     border-radius: 10px;
-    padding-left: 50px;
+    padding-left: 30px;
     padding-right: 50px;
     margin-top: 30px;
     border-radius: 20px;
 
 }
 
+
 .cont_header {
     text-align: start;
     font-family: 'Montserrat', sans-serif;
-    font-weight: 900;
-    font-size: 50px;
+    font-weight: bold;
+    font-size: 45px;
     color: white;
 }
 
@@ -84,9 +100,14 @@
     font-weight: 400;
     font-size: 30px;
     color: white;
-    width: 90%;
+    width: 100%;
 }
 
+@media(max-width:820px){
+    .lower_right{
+        display: none;
+    }
+}
 
 @media only screen and (max-width: 425px) {
     .lower_box {
