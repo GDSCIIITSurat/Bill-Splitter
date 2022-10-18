@@ -6,13 +6,19 @@
     padding: 0;
     box-sizing: border-box;
 }
+.auth-body{
+    margin: 0;
+    padding: 0;
+}
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #ffffff00;
 }
-
+.loginhead{
+    width: 100%;
+}
 .description {
     color: #e6e6e6;
     font-size: large;
@@ -23,7 +29,6 @@ header {
     align-items: center;
     background-color: #ffffff00;
 }
-
 .center {
     justify-content: center;
     align-items: center;
@@ -36,6 +41,10 @@ header {
     color: #e6e6e6;
 }
 
+.align-items-center{
+    display: flex;
+    justify-content: space-around;
+}
 .nav_links{
     text-decoration: none;
     font-family: "Montserrat", sans-serif;
@@ -43,7 +52,8 @@ header {
     font-size: 19px;
     color: #e6e6e6;
     text-decoration: none;
-
+    /* display: flex;
+    justify-content: space-around; */
     background-color: #ffffff00;
     padding: 10px 20px 10px 20px;
     border: none;
@@ -72,6 +82,10 @@ header {
 }
 .box{
     width: 60%;
+    padding-bottom: 7.5rem;
+}
+.loginbox{
+    padding-bottom: 7.5rem;
 }
 
 .home-body {
@@ -136,7 +150,7 @@ header {
 .auth-body {
     background: linear-gradient(90deg, rgba(0,75,136,1) 0%, rgba(0,180,169,1) 100%);
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     flex-direction: column;
     height: 100vh;
     padding: 1rem;
