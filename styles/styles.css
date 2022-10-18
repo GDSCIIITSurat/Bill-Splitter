@@ -41,6 +41,10 @@ header {
     color: #e6e6e6;
 }
 
+.align-items-center{
+    display: flex;
+    justify-content: space-around;
+}
 .nav_links{
     text-decoration: none;
     font-family: "Montserrat", sans-serif;
@@ -48,7 +52,8 @@ header {
     font-size: 19px;
     color: #e6e6e6;
     text-decoration: none;
-
+    /* display: flex;
+    justify-content: space-around; */
     background-color: #ffffff00;
     padding: 10px 20px 10px 20px;
     border: none;
