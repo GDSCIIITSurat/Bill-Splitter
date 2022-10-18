@@ -19,13 +19,13 @@
 
     <h1 class="title fw-bolder" >Login</h1> <br>
 
-    <form class="box loginbox">  
+    <form class="box loginbox" id="loginForm">  
         <div class="auth-container">   
             <label class="mb-2 fw-bold">Email Address: </label> <br>
-            <input type="email" placeholder=" Enter Email Address" name="email" required> <br> <br>
+            <input type="email" placeholder=" Enter Email Address" name="email" required id="email"> <br> <br>
 
             <label class="mb-2 fw-bold">Password: </label> <br>
-            <input class="mb-2" type="password" placeholder=" Enter Password" name="password" required> <br>
+            <input class="mb-2" type="password" placeholder=" Enter Password" name="password" required id="password"> <br>
             
             <!-- Need to link the forget password-->
             <a href="">Forgot password?</a> <br> <br>
@@ -41,7 +41,7 @@
 
         </div>   
     </form>    
-
+    <script src="../js/login.js"></script>
 
 </body>
 </html>
