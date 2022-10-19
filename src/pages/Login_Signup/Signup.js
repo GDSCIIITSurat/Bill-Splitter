@@ -15,7 +15,10 @@ function Signup() {
   const [checkLen, setCheckLen] = useState("d-none");
   const [captcha,setCaptcha]=useState("")
   const [Usercaptcha,setUserCaptcha]=useState("")
-
+  const [display,setDisplay]=useState("password")
+  const [text,setText]=useState("Show")
+  // var display="password"
+  // var state="Show"
   const info = { name, email, contactNumber, password, confirmPassword };
 
   function PasswordGenerator (ran){
@@ -45,6 +48,18 @@ function Signup() {
     e.preventDefault()
     let value=PasswordGenerator(6)
     setCaptcha(value)
+  }
+
+  const topple=(e)=>{
+    e.preventDefault()
+    if(display==="text"){
+      setDisplay("password")
+      setText("Show")
+    }
+    else{
+      setDisplay("text")
+      setText("Hide")
+    }
   }
   function validateFormData(e){
     
@@ -140,7 +155,7 @@ function Signup() {
                 </label>
                 
                 <input
-                  type="text"
+                  type={display}
                   className={`form-control ${checkValid}`}
                   id="password"
                   onChange={(e) => setPassword(e.target.value)}
@@ -148,6 +163,7 @@ function Signup() {
                   required
                   value={password}
                 />
+                <button id="suggestionButton" onClick={(e)=> topple(e)}>{text}</button>
                 <PasswordStrengthBar password={password} />
                 <div className="invalid-feedback">Password do not match.</div>
                 <div className={`${checkLen} invalid-feedback`}>Password should be greater than 6 digits.</div>
