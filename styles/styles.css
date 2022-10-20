@@ -6,19 +6,23 @@
     padding: 0;
     box-sizing: border-box;
 }
-.auth-body{
+
+.auth-body {
     margin: 0;
     padding: 0;
 }
+
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #ffffff00;
 }
-.loginhead{
+
+.loginhead {
     width: 100%;
 }
+
 .description {
     color: #e6e6e6;
     font-size: large;
@@ -29,6 +33,7 @@ header {
     align-items: center;
     background-color: #ffffff00;
 }
+
 .center {
     justify-content: center;
     align-items: center;
@@ -41,11 +46,12 @@ header {
     color: #e6e6e6;
 }
 
-.align-items-center{
+.align-items-center {
     display: flex;
     justify-content: space-around;
 }
-.nav_links{
+
+.nav_links {
     text-decoration: none;
     font-family: "Montserrat", sans-serif;
     font-weight: bolder;
@@ -59,10 +65,12 @@ header {
     border: none;
     text-decoration: none;
 }
-.picDiv{
+
+.picDiv {
     height: 78vh;
 }
-.nav_links a:hover{
+
+.nav_links a:hover {
     color: rgb(185, 255, 255);
 }
 
@@ -73,24 +81,26 @@ header {
     font-size: 3.2vw;
 }
 
-.coverimg{
-    
+.coverimg {
+
     object-fit: cover;
     height: 100%;
     width: 100%;
     opacity: 0.6;
 }
-.box{
+
+.box {
     width: 60%;
     padding-bottom: 7.5rem;
 }
-.loginbox{
+
+.loginbox {
     padding-bottom: 7.5rem;
 }
 
 .home-body {
-    background: rgb(0,75,136);
-    background: linear-gradient(90deg, rgba(0,75,136,1) 0%, rgba(0,180,169,1) 100%); 
+    background: rgb(0, 75, 136);
+    background: linear-gradient(90deg, rgba(0, 75, 136, 1) 0%, rgba(0, 180, 169, 1) 100%);
 }
 
 .describe {
@@ -98,14 +108,15 @@ header {
     background-image: url("https://images.unsplash.com/photo-1500316124030-4cffa46f10f0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");
     background-size: cover;
 }
-.lato{
+
+.lato {
     position: absolute;
     top: 20%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
-#pic_btn{
+#pic_btn {
     padding: 1.8rem;
     display: flex;
     align-items: center;
@@ -118,12 +129,8 @@ header {
     border-radius: 2.2rem;
 }
 
-#pic_btn:hover{
+#pic_btn:hover {
     padding: 2rem;
-}
-
-.container{
-    height: 90vh;
 }
 
 .card {
@@ -139,16 +146,17 @@ header {
     transform: scale(1.04);
 }
 
-.card-body{
+.card-body {
     color: black;
 }
 
-#demo{
+#demo {
     color: rgb(36, 47, 155);
     font-size: larger;
 }
+
 .auth-body {
-    background: linear-gradient(90deg, rgba(0,75,136,1) 0%, rgba(0,180,169,1) 100%);
+    background: linear-gradient(90deg, rgba(0, 75, 136, 1) 0%, rgba(0, 180, 169, 1) 100%);
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -157,7 +165,7 @@ header {
     align-items: center;
 }
 
-.auth-container{
+.auth-container {
     background-color: #FAF9F6;
     border: 2px solid rgb(255, 255, 255);
     border-radius: 15px;
@@ -178,7 +186,7 @@ header {
     width: 50%;
     float: left;
     padding: 20px;
-    
+
     text-align: center;
 }
 
@@ -219,7 +227,7 @@ header {
     border-radius: 15px;
 }
 
-.payment:hover{
+.payment:hover {
     background-color: #f3f3f3;
 }
 
@@ -264,52 +272,56 @@ header {
     text-align: left;
 }
 
-#button{
+#button {
     font-weight: bolder;
     border-color: none;
     color: #DCD6F7;
     background-color: #091ba2;
 }
 
-#button:hover{
+#button:hover {
     background-color: #DCD6F7;
     color: #091ba2;
 }
 
-input[type=text], input[type=password], input[type=email],input[type=phone] {
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=phone] {
     border-radius: 10px;
     width: 100%;
-    border:1px solid rgb(145, 141, 141);
+    border: 1px solid rgb(145, 141, 141);
     padding-left: 1.5%;
     height: 7vh;
 }
 
-input[type=submit]{
+input[type=submit] {
     border-radius: 1rem;
 }
 
 
-.question{
+.question {
     font-weight: bolder;
     font-size: large;
     padding-bottom: 0.5rem;
 }
 
-.condet{
+.condet {
     text-align: center;
 }
 
-.maicon{
+.maicon {
     font-weight: bold;
 }
 
-.bg-info-custom{
+.bg-info-custom {
     background-color: #8BBCCC;
 }
 
-.faq-body{
-    background: linear-gradient(90deg, rgba(0,75,136,1) 0%, rgba(0,180,169,1) 100%);
+.faq-body {
+    background: linear-gradient(90deg, rgba(0, 75, 136, 1) 0%, rgba(0, 180, 169, 1) 100%);
 }
+
 .container_custom {
     color: wheat;
     min-height: 100vh;
@@ -317,18 +329,108 @@ input[type=submit]{
     padding-bottom: 10vh;
     /* background-color: rgb(100, 111, 212); */
 }
-@media(max-width:840px){
-    .box{
-       width: 75%; 
+
+@media(max-width:840px) {
+    .box {
+        width: 75%;
     }
 }
 
-@media(max-width:650px){
-    .box{
-        width: 120%; 
-     }
-     .title{
+@media(max-width:650px) {
+    .box {
+        width: 120%;
+    }
+
+    .title {
         font-size: 8vw;
-     }
+    }
 }
 
+/* Footer styling */
+
+.footer-div {
+    /* background: linear-gradient(90deg, rgba(0, 75, 136, 1) 0%, rgba(0, 180, 169, 1) 100%); */
+    padding: 30px 0px;
+    font-family: 'Play', sans-serif;
+    text-align: center;
+}
+
+.footer-div .logo {
+    width: 100%;
+    margin: 1% 0%;
+    padding: 0.6% 0%;
+    color: black;
+    font-size: 0.8em;
+}
+
+.footer-div .logo a {
+    color: black;
+}
+
+
+.footer-div .logo a:hover {
+    color: #fff;
+}
+
+.footer-div .row a:hover {
+    color: #fff;
+}
+
+.footer-div .logo a i {
+    font-size: 2em;
+    margin: 10px;
+}
+
+.footer-div .logo a {
+    text-decoration: none;
+    color: black;
+    transition: 0.5s;
+}
+.footer-div .row a {
+    text-decoration: none;
+    color: black;
+    transition: 0.5s;
+}
+
+.footer-div .row ul {
+    width: 100%;
+}
+
+.footer-div .row ul li {
+    display: inline-block;
+    margin: 0px 30px;
+}
+
+@media (max-width:720px) {
+    .footer-div {
+        text-align: left;
+        padding: 5%;
+    }
+
+    .footer-div .row ul li {
+        display: block;
+        margin: 10px 0px;
+        text-align: left;
+    }
+
+    .footer-div .logo a i {
+        margin: 0% 3%;
+    }
+}
+
+.footer-div .logo {
+    margin: 20px;
+}
+
+.footer-div .row {
+    margin: 35px;
+}
+
+.footer-div .copyright {
+    margin: 20px;
+}
+
+#hrTag{
+    /* height: 10px; */
+    width: 100%;
+}

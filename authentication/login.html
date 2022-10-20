@@ -1,13 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bill Splitter</title>
     <link rel="stylesheet" href="../styles/styles.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <!-- For Logos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap" rel="stylesheet">
 </head>
+
 <body class="auth-body">
     <header class="p-3 loginhead">
         <h2 class="ps-3 logo">Bill Splitter</h2>
@@ -17,16 +27,17 @@
         </nav>
     </header>
 
-    <h1 class="title fw-bolder" >Login</h1> <br>
+    <h1 class="title fw-bolder">Login</h1> <br>
 
-    <form class="box loginbox" id="loginForm">  
-        <div class="auth-container">   
+    <form class="box loginbox" id="loginForm">
+        <div class="auth-container">
             <label class="mb-2 fw-bold">Email Address: </label> <br>
             <input type="email" placeholder=" Enter Email Address" name="email" required id="email"> <br> <br>
 
             <label class="mb-2 fw-bold">Password: </label> <br>
-            <input class="mb-2" type="password" placeholder=" Enter Password" name="password" required id="password"> <br>
-            
+            <input class="mb-2" type="password" placeholder=" Enter Password" name="password" required id="password">
+            <br>
+
             <!-- Need to link the forget password-->
             <a href="">Forgot password?</a> <br> <br>
             <!-- Need to do something with the login button-->
@@ -34,14 +45,42 @@
                 <button id="button" type="submit" class="col-6 btn btn-outline-secondary">Login</button>
             </div>
 
-            
+
             <input type="checkbox" checked="checked"> Remember me <br>
-            
+
             <p>Don't have an account? <a href="register.html">Register!</a></p>
 
-        </div>   
-    </form>    
+        </div>
+    </form>
+    <!-- Footer -->
+
+    <hr id="hrTag">
+    <footer class="px-4">
+        <div class="footer-div">
+            <div class="logo">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+            </div>
+
+            <div class="row">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact us</a></li>
+                    <li><a href="../faq.html">FAQ</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+
+            <div class="copyright">
+                Bill Splitter Copyright © 2022 GDSC - All rights reserved
+            </div>
+        </div>
+    </footer>
     <script src="../js/login.js"></script>
 
 </body>
+
 </html>
