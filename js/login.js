@@ -1,6 +1,8 @@
+/*********************** Asyncrhonous function which Posts data and give response accordingly **********************/
+
 const PostInfo = async (info) => {
   document.getElementById("button").disabled = true;
-  const url = "https://bill-splitter-backend-iiits.herokuapp.com/api/v1/login";
+  const url = "https://bill-splitter-backend-iiits.herokuapp.com/api/v1/login"; /*Sending data(info) to this url*/
   var myHeaders = new Headers();
   myHeaders.append("Content-Type", "application/json");
 
@@ -36,11 +38,12 @@ const PostInfo = async (info) => {
 
 };
 
+/******************************************* Accessing DOM Elements ***********************************************/
 
 document.querySelector("#loginForm").addEventListener("submit", (e) => {
   e.preventDefault();
   const email = document.getElementById("email").value;
   const password = document.getElementById("password").value;
-  const info = { email: email, password };
+  const info = { email: email, password }; /* Making an object */
   PostInfo(info);
 });
