@@ -424,6 +424,7 @@ input[type=submit] {
     .menuIcon{
         display: flex;
     }
+    /* This is for the menu */
     #menus{
         display: flex;
         flex-direction: column;
