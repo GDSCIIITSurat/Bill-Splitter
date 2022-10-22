@@ -1,5 +1,11 @@
-function validateFormData(password, confirmPassword, info) {
+ /***************************************** Validating and posting the data ****************************************/
+
+ function validateFormData(password, confirmPassword, info) {
   var element = document.getElementsByClassName("register-pass");
+  
+  /********************************** Validating password and confirm password *************************************/
+
+
   if (
     password.length <= 6 || confirmPassword.length <= 6 || password !== confirmPassword ) {
     console.log(element);
@@ -7,11 +13,14 @@ function validateFormData(password, confirmPassword, info) {
       element[i].classList.add("is-invalid");
     }
   } else {
-    const url = "https://bill-splitter-backend-iiits.herokuapp.com/api/v1/signup";
+    const url = "https://bill-splitter-backend-iiits.herokuapp.com/api/v1/signup"; /*Sending data(info) to this url*/
     for (var i = 0; i < element.length; i++) {
       element[i].classList.remove("is-invalid");
       element[i].classList.add("is-valid");
     }
+
+
+    /*********************** Asyncrhonous function which Posts data and give response accordingly ******************/
 
     const PostInfo = async (info) => {
         var myHeaders = new Headers();
@@ -47,6 +56,8 @@ function validateFormData(password, confirmPassword, info) {
   }
 }
 
+/******************************************* Accessing DOM Elements ************************************************/
+
 document.querySelector("#registerForm").addEventListener("submit", (e) => {
   e.preventDefault();
   const Name = document.getElementById("name").value;
@@ -55,7 +66,8 @@ document.querySelector("#registerForm").addEventListener("submit", (e) => {
   const confirmPassword = document.getElementById("confirmPassword").value;
   const contactNumber = document.getElementById("contactNumber").value;
 
-  const info = { name: Name, email, password, confirmPassword, contactNumber };
+
+  const info = { name: Name, email, password, confirmPassword, contactNumber }; /* Making an object */
 
   if (e.target.checkValidity()) {
     console.log("...");

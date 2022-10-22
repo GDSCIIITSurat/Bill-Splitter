@@ -1,3 +1,5 @@
+/******************************************* Importing Google Fonts ***********************************************/
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Andada+Pro:ital@1&family=Ubuntu:wght@500&family=Lobster&family=Lato&family=Rubik:wght@500&display=swap');
 
@@ -7,10 +9,7 @@
     box-sizing: border-box;
 }
 
-.auth-body {
-    margin: 0;
-    padding: 0;
-}
+/************************************************ For Navbar *******************************************************/
 
 header {
     display: flex;
@@ -21,29 +20,6 @@ header {
 
 .loginhead {
     width: 100%;
-}
-
-.description {
-    color: #e6e6e6;
-    font-size: large;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #ffffff00;
-}
-
-.center {
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.logo {
-    font-size: 35px;
-    font-weight: bold;
-    color: #e6e6e6;
 }
 
 .align-items-center {
@@ -58,20 +34,28 @@ header {
     font-size: 19px;
     color: #e6e6e6;
     text-decoration: none;
-    /* display: flex;
-    justify-content: space-around; */
     background-color: #ffffff00;
     padding: 10px 20px 10px 20px;
     border: none;
     text-decoration: none;
 }
 
-.picDiv {
-    height: 78vh;
-}
-
 .nav_links a:hover {
     color: rgb(185, 255, 255);
+}
+
+/******************************************** Authentication files *************************************************/
+
+.auth-body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(90deg, rgba(0, 75, 136, 1) 0%, rgba(0, 180, 169, 1) 100%);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 100vh;
+    padding: 1rem;
+    align-items: center;
 }
 
 .title {
@@ -81,88 +65,9 @@ header {
     font-size: 3.2vw;
 }
 
-.coverimg {
-
-    object-fit: cover;
-    height: 100%;
-    width: 100%;
-    opacity: 0.6;
-}
-
 .box {
     width: 60%;
     padding-bottom: 7.5rem;
-}
-
-.loginbox {
-    padding-bottom: 7.5rem;
-}
-
-.home-body {
-    background: rgb(0, 75, 136);
-    background: linear-gradient(90deg, rgba(0, 75, 136, 1) 0%, rgba(0, 180, 169, 1) 100%);
-}
-
-.describe {
-    position: relative;
-    background-image: url("https://images.unsplash.com/photo-1500316124030-4cffa46f10f0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");
-    background-size: cover;
-}
-
-.lato {
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-#pic_btn {
-    padding: 1.8rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    height: 1rem;
-    color: black;
-    font-weight: bold;
-    background-color: #8BBCCC;
-    border-radius: 2.2rem;
-}
-
-#pic_btn:hover {
-    padding: 2rem;
-}
-
-.card {
-    border: none;
-    margin: auto;
-    margin-bottom: 3vh;
-    opacity: 0.9;
-    transition: transform 350ms ease;
-    border-radius: 18px;
-}
-
-.card:hover {
-    transform: scale(1.04);
-}
-
-.card-body {
-    color: black;
-}
-
-#demo {
-    color: rgb(36, 47, 155);
-    font-size: larger;
-}
-
-.auth-body {
-    background: linear-gradient(90deg, rgba(0, 75, 136, 1) 0%, rgba(0, 180, 169, 1) 100%);
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    height: 100vh;
-    padding: 1rem;
-    align-items: center;
 }
 
 .auth-container {
@@ -175,12 +80,68 @@ header {
     width: 70%;
 }
 
-.avatar {
-    width: 40%;
-    height: 40%;
-    border-radius: 50%;
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=phone] {
+    border-radius: 10px;
+    width: 100%;
+    border: 1px solid rgb(145, 141, 141);
+    padding-left: 1.5%;
+    height: 7vh;
 }
 
+input[type=submit] {
+    border-radius: 1rem;
+}
+
+#button {
+    font-weight: bolder;
+    border-color: none;
+    color: #DCD6F7;
+    background-color: #091ba2;
+}
+
+#button:hover {
+    background-color: #DCD6F7;
+    color: #091ba2;
+}
+
+@media(max-width:840px) {
+    .box {
+        width: 75%;
+    }
+}
+
+@media(max-width:650px) {
+    .box {
+        width: 120%;
+    }
+
+    .title {
+        font-size: 8vw;
+    }
+}
+
+/******************************************** For login only ******************************************************/
+
+.loginbox {
+    padding-bottom: 7.5rem;
+}
+
+/********************************************* Profile files ******************************************************/
+
+.center {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.personal-info-field {
+    background-color: #e1e1e1;
+    padding: 10px;
+    border-radius: 15px;
+}
 
 .profile-box-right {
     width: 50%;
@@ -200,37 +161,6 @@ header {
     list-style: none;
 }
 
-.payment {
-    background-color: #e1e1e1;
-    border-radius: 15px;
-    color: black;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    height: 5%;
-    padding: 10px;
-    align-items: center;
-}
-
-.personal-info {
-    color: black;
-
-    justify-content: left;
-    height: 5%;
-    padding: 5px 10px 25px 30px;
-    align-items: left;
-}
-
-.personal-info-field {
-    background-color: #e1e1e1;
-    padding: 10px;
-    border-radius: 15px;
-}
-
-.payment:hover {
-    background-color: #f3f3f3;
-}
-
 .friends {
     background-color: #e1e1e1;
     border-radius: 15px;
@@ -242,17 +172,19 @@ header {
     align-items: center;
 }
 
-.friend-name {
-    padding-top: 10px;
-    font-size: 25px
-}
-
 .avatar-friend {
     width: 125px;
     height: 125px;
     border-radius: 50%;
     padding: 20px 20px 20px 20px;
 }
+
+.friend-name {
+    padding-top: 10px;
+    font-size: 25px
+}
+
+/******************************************** For expense only *****************************************************/
 
 .item-list {
     list-style: none;
@@ -272,46 +204,109 @@ header {
     text-align: left;
 }
 
-#button {
-    font-weight: bolder;
-    border-color: none;
-    color: #DCD6F7;
-    background-color: #091ba2;
+/******************************************** For profile only ******************************************************/
+
+.personal-info {
+    color: black;
+
+    justify-content: left;
+    height: 5%;
+    padding: 5px 10px 25px 30px;
+    align-items: left;
 }
 
-#button:hover {
-    background-color: #DCD6F7;
-    color: #091ba2;
+.payment {
+    background-color: #e1e1e1;
+    border-radius: 15px;
+    color: black;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 5%;
+    padding: 10px;
+    align-items: center;
 }
 
-input[type=text],
-input[type=password],
-input[type=email],
-input[type=phone] {
-    border-radius: 10px;
-    width: 100%;
-    border: 1px solid rgb(145, 141, 141);
-    padding-left: 1.5%;
-    height: 7vh;
+.payment:hover {
+    background-color: #f3f3f3;
 }
 
-input[type=submit] {
-    border-radius: 1rem;
+.avatar {
+    width: 40%;
+    height: 40%;
+    border-radius: 50%;
 }
 
+/******************************************* For index and faq ****************************************************/
+
+.logo {
+    font-size: 35px;
+    font-weight: bold;
+    color: #e6e6e6;
+}
+
+.card {
+    border: none;
+    margin: auto;
+    margin-bottom: 3vh;
+    opacity: 0.9;
+    transition: transform 350ms ease;
+    border-radius: 18px;
+}
+
+.card:hover {
+    transform: scale(1.04);
+}
+
+.card-body {
+    color: black;
+}
+
+/******************************************** For index only ******************************************************/
+
+.picDiv {
+    height: 78vh;
+}
+
+.home-body {
+    background: rgb(0, 75, 136);
+    background: linear-gradient(90deg, rgba(0, 75, 136, 1) 0%, rgba(0, 180, 169, 1) 100%);
+}
+
+.describe {
+    position: relative;
+    background-image: url("https://images.unsplash.com/photo-1500316124030-4cffa46f10f0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");
+    background-size: cover;
+}
+
+#pic_btn {
+    padding: 1.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 1rem;
+    color: black;
+    font-weight: bold;
+    background-color: #8BBCCC;
+    border-radius: 2.2rem;
+}
+
+#pic_btn:hover {
+    padding: 2rem;
+}
+
+#demo {
+    color: rgb(36, 47, 155);
+    font-size: larger;
+}
+
+/********************************************** For FAQ only ******************************************************/
 
 .question {
     font-weight: bolder;
     font-size: large;
     padding-bottom: 0.5rem;
-}
-
-.condet {
-    text-align: center;
-}
-
-.maicon {
-    font-weight: bold;
 }
 
 .bg-info-custom {
@@ -327,29 +322,11 @@ input[type=submit] {
     min-height: 100vh;
     padding-top: 5vh;
     padding-bottom: 10vh;
-    /* background-color: rgb(100, 111, 212); */
 }
 
-@media(max-width:840px) {
-    .box {
-        width: 75%;
-    }
-}
-
-@media(max-width:650px) {
-    .box {
-        width: 120%;
-    }
-
-    .title {
-        font-size: 8vw;
-    }
-}
-
-/* Footer styling */
+/*************************************************** Footer ********************************************************/
 
 .footer-div {
-    /* background: linear-gradient(90deg, rgba(0, 75, 136, 1) 0%, rgba(0, 180, 169, 1) 100%); */
     padding: 30px 0px;
     font-family: 'Play', sans-serif;
     text-align: center;
@@ -386,6 +363,7 @@ input[type=submit] {
     color: black;
     transition: 0.5s;
 }
+
 .footer-div .row a {
     text-decoration: none;
     color: black;
@@ -430,8 +408,7 @@ input[type=submit] {
     margin: 20px;
 }
 
-#hrTag{
-    /* height: 10px; */
+#hrTag {
     width: 100%;
 }
 
