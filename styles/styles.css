@@ -434,3 +434,31 @@ input[type=submit] {
     /* height: 10px; */
     width: 100%;
 }
+
+.menuIcon{
+    display: none;
+    width: 30px;
+}
+@media(max-width:840px) {
+ 
+    .nav_links.row.align-items-center{
+        display: none;
+    }
+    .menuIcon{
+        display: flex;
+    }
+    #menus{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #header5{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+
