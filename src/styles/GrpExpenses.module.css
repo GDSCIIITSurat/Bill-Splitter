@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&family=Rubik:wght@500&display=swap");
+
+.bg {
+    background-image: url("/public/bg.png");
+    background-size: cover;
+    height: 100vh;
+    padding: 5vh 10vw;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.container {
+    background-color: white;
+    border-radius: 1vw;
+}
+
+.header {
+    border-start-end-radius: 1vw;
+    border-start-start-radius: 1vw;
+    padding: 3% 5%;
+    background-color: rgb(63, 164, 253);
+    border-bottom: 4px solid rgb(5, 5, 121);
+    /* margin-bottom: 1vh; */
+}
+
+.heading {
+    color: white;
+}
+
+.members {
+    color: white;
+}
+
+.expenses {
+    height: 58vh;
+    overflow: auto;
+    white-space: nowrap;
+}
+
+.expense {
+    display: grid;
+    border: 1px solid grey;
+    border-bottom: 2px solid grey;
+    border-radius: .5vh;
+    margin: 2vh 0;
+    padding: 2vh 0;
+    width: 100%;
+    grid-template-columns: 0.5fr 1.5fr 3.33fr 3.33fr 3.33fr;
+}
+
+.expense_date_header {
+    grid-column: 2/3;
+}
+
+.expenseDate {
+    grid-column: 2/3;
+}
+
+.expenseName {
+    grid-column: 3/4;
+}
+
+.expenseAmount {
+    grid-column: 4/5;
+}
+
+.youBorrowed {
+    grid-column: 5/6;
+    color: orangered;
+    font-weight: 600;
+}
+
+.youLent {
+    grid-column: 5/6;
+    color: green;
+    font-weight: 600;
+}
+
+.grpFooter {
+    width: 100%;
+    display: flex;
+    background-color: rgb(63, 164, 253);
+    border-end-end-radius: 1vw;
+    border-end-start-radius: 1vw;
+    padding: 1.5% 5%;
+    align-items: flex-end;
+    justify-content: end;
+}
+
+.grpFooter button {
+    margin: 0 .5vw;
+    padding: .5% 1%;
+    border: none;
+    border-radius: 0.5vh;
+    /* background-color: rgb(0, 0, 255); */
+    background-image: linear-gradient(to right, #212B6C 0%, #3747aa 100%);
+
+    border-bottom: 4px solid rgb(5, 5, 121);
+    color: white;
+    font-weight: bold;
+}
+
+.grpFooter button:active {
+    background-image: linear-gradient(to right, rgb(5, 5, 121) 0%, rgb(5, 5, 121) 51%, rgb(5, 5, 121) 100%);
+}
+
+.add {
+    position: absolute;
+    background-color: #212B6C;
+    color: white;
+    border-radius: 10vh;
+    padding: 1vh 1vw;
+    bottom: 14%;
+    right: 13%;
+}
+
+.add:active {
+    background-color: rgb(5, 5, 121);
+}
