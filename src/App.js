@@ -4,7 +4,6 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Landingpage from "./pages/Landingpage";
 import Profile from "./pages/Profile/Profile";
 import Signup from "./pages/Login_Signup/Signup";
-import Home from "./pages/Main_Home/Home";
 import GrpExpenses from "./pages/Expenses/GrpExpenses";
 import ExpensePage from "./pages/ExpensePage";
 import FAQ from "./pages/FAQ";

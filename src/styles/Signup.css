@@ -50,3 +50,12 @@
     border-radius: 25px;
     padding: 10px 50px;
   }
+  #suggestionButton{
+    border: 1px solid grey;
+    padding: 3px;
+    border-radius: 6px;
+  }
+  .captcha{
+    border: 1px solid grey;
+    letter-spacing: 3.5vw;
+  }
