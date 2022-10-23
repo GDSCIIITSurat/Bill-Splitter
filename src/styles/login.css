@@ -1,0 +1,18 @@
+#customsection {
+    min-height: 100vh;
+    background: linear-gradient(45deg, rgba(9,9,121,1) 0%, rgba(57,57,180,0.9738489145658263) 22%, rgba(121,153,199,1) 51%, rgba(57,57,180,0.9738489145658263) 77%, rgba(9,9,121,1) 100%);
+    background-color: red;
+    
+  }
+  
+  #customcard{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    max-width: 65%;
+      box-shadow: 0px 0px 30px black;
+      font-family: Geneva,Tahoma,Verdana,sans-serif;
+      background: rgb(252,252,254);
+      background: linear-gradient(-45deg, rgba(252,252,254,0.9878545168067226) 10%, rgba(228,228,231,1) 50%, rgba(252,252,254,1) 90%);
+  
+  }
