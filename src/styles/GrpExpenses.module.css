@@ -14,13 +14,36 @@
     border-radius: 1vw;
 }
 
+@media screen and (max-width: 1000px) {
+    .bg {
+        padding: 4vh 8vw;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .bg {
+        padding: 2.5vh 5vw;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .bg {
+        padding: 1vh 2vw;
+    }
+}
+
+/* @media screen and (max-width: 768px) {
+    .bg {
+        padding: 2.5vh 5vw;
+    }
+} */
+
 .header {
     border-start-end-radius: 1vw;
     border-start-start-radius: 1vw;
-    padding: 3% 5%;
+    padding: 3vh 5vw;
     background-color: rgb(63, 164, 253);
     border-bottom: 4px solid rgb(5, 5, 121);
-    /* margin-bottom: 1vh; */
 }
 
 .heading {
@@ -32,9 +55,27 @@
 }
 
 .expenses {
-    height: 58vh;
+    max-height: 58vh;
     overflow: auto;
     white-space: nowrap;
+}
+
+@media screen and (max-width: 1000px) {
+    .expenses {
+        max-height: 60vh;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .expenses {
+        max-height: 63vh;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .expenses {
+        max-height: 66vh;
+    }
 }
 
 .expense {
@@ -45,7 +86,13 @@
     margin: 2vh 0;
     padding: 2vh 0;
     width: 100%;
-    grid-template-columns: 0.5fr 1.5fr 3.33fr 3.33fr 3.33fr;
+    grid-template-columns: 0.5fr 1.5fr 3fr 3fr 4fr;
+}
+
+@media screen and (max-width: 650px) {
+    .expense {
+        padding: 1vh 0;
+    }
 }
 
 .expense_date_header {
@@ -54,14 +101,34 @@
 
 .expenseDate {
     grid-column: 2/3;
+    display: flex;
+    align-items: center;
+}
+
+.date {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    white-space: nowrap;
+    line-height: 30%;
+}
+
+.dateMonth {
+    font-size: .7rem;
+    font-weight: 500;
 }
 
 .expenseName {
     grid-column: 3/4;
+    display: flex;
+    align-items: center;
 }
 
 .expenseAmount {
     grid-column: 4/5;
+    display: flex;
+    align-items: center;
 }
 
 .youBorrowed {
@@ -76,6 +143,24 @@
     font-weight: 600;
 }
 
+@media screen and (max-width: 650px) {
+    .youBorrowed {
+        display: flex;
+        flex-direction: column;
+        line-height: 30%;
+    }
+
+    .youLent {
+        display: flex;
+        flex-direction: column;
+        line-height: 30%;
+    }
+
+    .text {
+        font-size: 0.7rem;
+    }
+}
+
 .grpFooter {
     width: 100%;
     display: flex;
@@ -84,7 +169,7 @@
     border-end-start-radius: 1vw;
     padding: 1.5% 5%;
     align-items: flex-end;
-    justify-content: end;
+    justify-content: flex-end;
 }
 
 .grpFooter button {
@@ -92,7 +177,6 @@
     padding: .5% 1%;
     border: none;
     border-radius: 0.5vh;
-    /* background-color: rgb(0, 0, 255); */
     background-image: linear-gradient(to right, #212B6C 0%, #3747aa 100%);
 
     border-bottom: 4px solid rgb(5, 5, 121);
@@ -102,18 +186,4 @@
 
 .grpFooter button:active {
     background-image: linear-gradient(to right, rgb(5, 5, 121) 0%, rgb(5, 5, 121) 51%, rgb(5, 5, 121) 100%);
-}
-
-.add {
-    position: absolute;
-    background-color: #212B6C;
-    color: white;
-    border-radius: 10vh;
-    padding: 1vh 1vw;
-    bottom: 14%;
-    right: 13%;
-}
-
-.add:active {
-    background-color: rgb(5, 5, 121);
 }

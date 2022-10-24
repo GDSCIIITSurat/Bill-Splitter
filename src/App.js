@@ -18,6 +18,7 @@ function App() {
           <Route path="/profile" element={<Profile />} />
           <Route path="/signup" element={<Signup />}></Route>
           <Route path="/expense/group" element={<GrpExpenses />} />
+          {/* Go to path="/expense/group?groupname=Test%20Group" to see the output */}
           <Route path="/expense" element={<ExpensePage />} />
           <Route path="/faq" element={<FAQ />} />
         </Routes>
