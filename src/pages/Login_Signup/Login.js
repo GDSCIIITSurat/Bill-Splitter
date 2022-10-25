@@ -11,7 +11,6 @@ function Login() {
   const submit = (e) => {
     e.preventDefault();
     setLoading(true);
-    console.log(loading);
     const info = { email, password };
     const url =
       "https://bill-splitter-backend-iiits.herokuapp.com/api/v1/login";
@@ -33,7 +32,6 @@ function Login() {
     };
 
     PostInfo();
-    console.log(loading);
   };
 
   return (
