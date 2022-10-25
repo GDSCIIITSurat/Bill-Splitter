@@ -200,10 +200,12 @@ function Signup() {
               </div>
               <p className="captcha">{captcha}</p>
               <input
+                id="captchaInput"
                 placeholder="Enter above Captcha"
                 onChange={(e) => setUserCaptcha(e.target.value)}
               ></input>
               <button
+                id="refreshButton"
                 className="btn btn-outline-success"
                 onClick={(e) => refreshCaptch(e)}
               >
@@ -212,7 +214,7 @@ function Signup() {
               <div className={`${checkCaptcha} invalid-feedback`}>
                 Cptcha Invalid
               </div>
-              <div className="d-flex justify-content-center p-3">
+              <div className="d-flex justify-content-center">
                 <button
                   type="submit"
                   className="btn btn-outline-success"

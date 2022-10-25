@@ -1,22 +1,63 @@
 #customsection {
   min-height: 100vh;
-  background: linear-gradient(45deg, rgba(9, 9, 121, 1) 0%, rgba(57, 57, 180, 0.9738489145658263) 22%, rgba(121, 153, 199, 1) 51%, rgba(57, 57, 180, 0.9738489145658263) 77%, rgba(9, 9, 121, 1) 100%);
-  background-color: red;
-
+  background: #fff;
+  /* background: linear-gradient(45deg, rgba(9, 9, 121, 1) 0%, rgba(57, 57, 180, 0.9738489145658263) 22%, rgba(121, 153, 199, 1) 51%, rgba(57, 57, 180, 0.9738489145658263) 77%, rgba(9, 9, 121, 1) 100%); */
 }
 
 #customcard {
   display: flex;
   justify-content: center;
   margin: auto;
-  max-width: 65%;
+  max-width: 50%;
   box-shadow: 0px 0px 30px black;
   font-family: Geneva, Tahoma, Verdana, sans-serif;
-  background: rgb(252, 252, 254);
-  background: linear-gradient(-45deg, rgba(252, 252, 254, 0.9878545168067226) 10%, rgba(228, 228, 231, 1) 50%, rgba(252, 252, 254, 1) 90%);
-
+  background: rgb(255, 255, 255);
+  /* background: linear-gradient(-45deg, rgba(252, 252, 254, 0.9878545168067226) 10%, rgba(228, 228, 231, 1) 50%, rgba(252, 252, 254, 1) 90%); */
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  border: none;
 }
 
+#customcard:hover{
+  transform: scale(1) !important;
+}
+
+#customcard h2{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+}
+
+#customcard form div label{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: rgb(115, 115, 115);
+}
+
+#customcard form div input{
+  outline: none;
+  padding: 10px 12px;
+  box-shadow: none;
+  border: 0;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+}
+
+#customcard .btn{
+  width: 100%;
+  border-radius: 6px;
+  margin: 20px 0;
+  background-color: #3930d8;
+  border: none;
+  color: #fff;
+  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 26%);
+  padding: 15px 50px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  transition: all 200ms ease;
+}
+#customcard .btn:hover{
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+}
 .loader {
   display: inline-block;
   position: relative;
@@ -58,5 +99,16 @@
   100% {
     top: 24px;
     height: 32px;
+  }
+}
+
+@media only screen and (max-width: 850px){
+  #customcard{
+    max-width: 70%;
+  }
+}
+@media only screen and (max-width: 500px){
+  #customcard{
+    max-width: 90%;
   }
 }
