@@ -4,6 +4,10 @@ import { useSearchParams } from "react-router-dom";
 import style from "../../styles/GrpExpenses.module.css";
 
 function GrpExpenses() {
+  // eslint-disable-next-line
+  const [searchParams, setSearchParams] = useSearchParams();
+  const grpname = searchParams.get("groupname");
+  // use this grpname to fetch data from backend
   const width = useWindowWidth();
   let expenses = [
     {
@@ -63,9 +67,7 @@ function GrpExpenses() {
       date: "2021-01-02",
     },
   ];
-  // eslint-disable-next-line
-  const [searchParams, setSearchParams] = useSearchParams();
-  let grpname = searchParams.get("groupname");
+
   return (
     <div className={style.bg}>
       <div className={style.container}>
