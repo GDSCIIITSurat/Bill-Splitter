@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
-import axios from 'axios';
+import axios from "axios";
 import "../../styles/Signup.css";
-import PasswordStrengthBar from 'react-password-strength-bar';
-
+import PasswordStrengthBar from "react-password-strength-bar";
+import { useNavigate } from "react-router-dom";
 
 function Signup() {
+  const navigate = useNavigate();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -13,76 +14,79 @@ function Signup() {
   const [checkValid, setCheckValid] = useState("");
   const [checkCaptcha, setCheckCaptcha] = useState("d-none");
   const [checkLen, setCheckLen] = useState("d-none");
-  const [captcha,setCaptcha]=useState("")
-  const [Usercaptcha,setUserCaptcha]=useState("")
-  const [display,setDisplay]=useState("password")
-  const [text,setText]=useState("Show")
-  // var display="password"
-  // var state="Show"
+  const [captcha, setCaptcha] = useState("");
+  const [Usercaptcha, setUserCaptcha] = useState("");
+  const [display, setDisplay] = useState("password");
+  const [text, setText] = useState("Show");
+  const [loading, setLoading] = useState(false);
   const info = { name, email, contactNumber, password, confirmPassword };
 
-  function PasswordGenerator (ran){
+  function PasswordGenerator(ran) {
     const random = (min = 0, max = 1) => {
-      return Math.floor(Math.random() * (max + 1 - min) + min)
-    }
+      return Math.floor(Math.random() * (max + 1 - min) + min);
+    };
     const randomSymbol = () => {
-      const symbols = "$%@#&!?abcdefghijklmnoXHBCJDHECDHCDSHC123456789"
-      return symbols[random(0, symbols.length - 1)]
+      const symbols = "$%@#&!?abcdefghijklmnoXHBCJDHECDHCDSHC123456789";
+      return symbols[random(0, symbols.length - 1)];
+    };
+    let pass = "";
+    for (let i = 0; i < ran; i++) {
+      pass += randomSymbol();
     }
-    let pass=""
-    for(let i=0;i<ran;i++){
-      pass+=randomSymbol()
-    }
-    return pass
+    return pass;
   }
-  const suggest=(e)=>{
-    e.preventDefault()
-      let value=PasswordGenerator(10)
-      setPassword(value)
-  }
-  useEffect(()=>{
-    let value=PasswordGenerator(6)
-    setCaptcha(value)
-  },[])
-  const refreshCaptch=(e)=>{
-    e.preventDefault()
-    let value=PasswordGenerator(6)
-    setCaptcha(value)
-  }
+  const suggest = (e) => {
+    e.preventDefault();
+    let value = PasswordGenerator(10);
+    setPassword(value);
+  };
+  useEffect(() => {
+    let value = PasswordGenerator(6);
+    setCaptcha(value);
+  }, []);
+  const refreshCaptch = (e) => {
+    e.preventDefault();
+    let value = PasswordGenerator(6);
+    setCaptcha(value);
+  };
 
-  const topple=(e)=>{
-    e.preventDefault()
-    if(display==="text"){
-      setDisplay("password")
-      setText("Show")
+  const topple = (e) => {
+    e.preventDefault();
+    if (display === "text") {
+      setDisplay("password");
+      setText("Show");
+    } else {
+      setDisplay("text");
+      setText("Hide");
     }
-    else{
-      setDisplay("text")
-      setText("Hide")
-    }
-  }
-  function validateFormData(e){
-    
-    if(password.length <= 6 || password.length <= 6){
+  };
+  function validateFormData(e) {
+    setLoading(true);
+    if (password.length <= 6 || password.length <= 6) {
       setCheckLen("d-inline-block");
-    }
-    else if(password !== confirmPassword){
+      setLoading(false);
+    } else if (password !== confirmPassword) {
       setCheckLen("d-none");
       setCheckValid("is-invalid");
-    }
-  else if(Usercaptcha!==captcha){
-    setCheckCaptcha("d-inline-block")
-  }
-    else{
-      const url = "https://bill-splitter-backend-iiits.herokuapp.com/api/v1/signup"
+      setLoading(false);
+    } else if (Usercaptcha !== captcha) {
+      setCheckCaptcha("d-inline-block");
+      setLoading(false);
+    } else {
+      const url =
+        "https://bill-splitter-backend-iiits.herokuapp.com/api/v1/signup";
       setCheckLen("d-none");
       setCheckValid("is-valid");
-      const PostInfo = async() => {
-        await axios.post(url, info)
-        .then(() => window.location.replace("/login"))
-        .catch((e) => console.log(e));
-      }
-      
+      const PostInfo = async () => {
+        await axios
+          .post(url, info)
+          .then(() => {
+            navigate("/login");
+            setLoading(false);
+          })
+          .catch((e) => console.log(e));
+      };
+
       PostInfo();
     }
   }
@@ -99,13 +103,15 @@ function Signup() {
           </div>
           <hr />
           <div>
-            <form onSubmit={(e) => {
-              e.preventDefault();
-              if(e.target.checkValidity()){
-                console.log("...")
-                validateFormData();
-              }
-            }}>
+            <form
+              onSubmit={(e) => {
+                e.preventDefault();
+                if (e.target.checkValidity()) {
+                  console.log("...");
+                  validateFormData();
+                }
+              }}
+            >
               <div className="mb-3">
                 <label htmlFor="name" className="form-label">
                   Name
@@ -148,12 +154,14 @@ function Signup() {
                   required
                 />
               </div>
-              <button id="suggestionButton" onClick={(e)=>suggest(e)} >suggest Password</button>
+              <button id="suggestionButton" onClick={(e) => suggest(e)}>
+                suggest Password
+              </button>
               <div className="mb-3">
                 <label htmlFor="password" className="form-label">
                   Password
                 </label>
-                
+
                 <input
                   type={display}
                   className={`form-control ${checkValid}`}
@@ -163,10 +171,14 @@ function Signup() {
                   required
                   value={password}
                 />
-                <button id="suggestionButton" onClick={(e)=> topple(e)}>{text}</button>
+                <button id="suggestionButton" onClick={(e) => topple(e)}>
+                  {text}
+                </button>
                 <PasswordStrengthBar password={password} />
                 <div className="invalid-feedback">Password do not match.</div>
-                <div className={`${checkLen} invalid-feedback`}>Password should be greater than 6 digits.</div>
+                <div className={`${checkLen} invalid-feedback`}>
+                  Password should be greater than 6 digits.
+                </div>
               </div>
 
               <div className="mb-3">
@@ -182,20 +194,39 @@ function Signup() {
                   required
                 />
                 <div className="invalid-feedback">Password do not match.</div>
-                <div className={`${checkLen} invalid-feedback`}>Password should be greater than 6 digits.</div>
+                <div className={`${checkLen} invalid-feedback`}>
+                  Password should be greater than 6 digits.
+                </div>
               </div>
-                <p className="captcha">{captcha}</p>
-                <input placeholder="Enter above Captcha" onChange={(e)=>setUserCaptcha(e.target.value)} ></input>
-                <button className="btn btn-outline-success"  onClick={(e)=>refreshCaptch(e)}>refreshCaptch</button>
-                <div className={`${checkCaptcha} invalid-feedback`}>Cptcha Invalid</div>
+              <p className="captcha">{captcha}</p>
+              <input
+                placeholder="Enter above Captcha"
+                onChange={(e) => setUserCaptcha(e.target.value)}
+              ></input>
+              <button
+                className="btn btn-outline-success"
+                onClick={(e) => refreshCaptch(e)}
+              >
+                refreshCaptch
+              </button>
+              <div className={`${checkCaptcha} invalid-feedback`}>
+                Cptcha Invalid
+              </div>
               <div className="d-flex justify-content-center p-3">
                 <button
                   type="submit"
                   className="btn btn-outline-success"
                   id="customBtn"
-                  
                 >
-                  Register
+                  {loading ? (
+                    <div className="loader">
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                    </div>
+                  ) : (
+                    "Register"
+                  )}
                 </button>
               </div>
             </form>

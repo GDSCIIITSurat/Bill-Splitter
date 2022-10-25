@@ -6,8 +6,11 @@ function Login() {
   const [email, setemail] = useState("");
   const [password, setpassword] = useState("");
   const [valid, setValid] = useState("d-none");
+  const [loading, setLoading] = useState(false);
 
-  const submit = () => {
+  const submit = (e) => {
+    e.preventDefault();
+    setLoading(true);
     const info = { email, password };
     const url =
       "https://bill-splitter-backend-iiits.herokuapp.com/api/v1/login";
@@ -18,11 +21,13 @@ function Login() {
         .then(() => {
           setValid("d-none");
           window.alert("Success");
+          setLoading(false);
         })
         .catch((e) => {
           if (e.response.status === 401) {
             setValid("d-inline-block");
           }
+          setLoading(false);
         });
     };
 
@@ -85,7 +90,15 @@ function Login() {
                   id="customBtn"
                   onClick={submit}
                 >
-                  Login
+                  {loading ? (
+                    <div className="loader">
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                    </div>
+                  ) : (
+                    "Login"
+                  )}
                 </button>
               </div>
             </form>
