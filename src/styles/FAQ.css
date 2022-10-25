@@ -7,18 +7,23 @@
     overflow: hidden;
     
 }
+hr {
+    position: relative;
+    top: 10px;
+    border: none;
+    height: 8px;
+    background: black;
+    margin-bottom: 50px;
+}
 .FAQ-container{
     width: 48vw;
-    
     height: 80vh;
     margin-top: 15vh;
     display: flex;
     flex-direction: column;
-    
     overflow: auto;
 }
 .FAQ-details{
-    
     color: rgba(1, 76, 238, 0.979);
     padding: 10px;
     border-bottom: 2px solid rgba(168, 154, 154, 0.651);
@@ -27,9 +32,11 @@
     font-size: 35px;
     min-width: 5vw;
 }
+
 .FAQ-p{
     font-size: 25px;
 }
+
 @media screen and (max-width:680px) {
     .FAQ-box{
         flex-direction: column;

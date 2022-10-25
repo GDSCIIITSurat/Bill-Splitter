@@ -13,11 +13,12 @@ function FAQ(){
     <img id="FAQ-image" src="https://img.freepik.com/free-vector/faqs-concept-illustration_114360-5185.jpg?w=2000" alt=""></img>
     <div className="FAQ-container">
     <p className="FAQ-disclaimer">Frequently Asked Questions</p>
-    <FaqLayout question="How Do i create an Account ?" answer="Ans:-Go to Home page,Click on Signup ,enter details and  press Signup button . As simple as that."/>
-    <FaqLayout question="How Do i Login ?" answer="Ans:-Go to Home page ,Click on login ,enter Email ID and Password and press Login button .  As simple as that."/>
-    <FaqLayout question="Is my Data  safe ?" answer="Ans:-Yes , No one accept you can access your financial details ."/>
-    <FaqLayout question="Why should i use it ?" answer="Ans:-Bill-Splitter Can help you to track your daily expenses and make you worry free about group expenses."/>
-    <FaqLayout question="Why do i contact support team ?" answer="Ans:-You can reach us through Email , Phone or through Post office .Any time , Any Day"/>
+    <hr />
+    <FaqLayout question="How do I create an Account ?" answer="Ans:-Go to home page,click on signup, enter details and  press signup button. As simple as that."/>
+    <FaqLayout question="How do I Login ?" answer="Ans:-Go to home page, click on login ,enter email ID and password and press Login button .  As simple as that."/>
+    <FaqLayout question="Is my data safe ?" answer="Ans:-Yes, no one except you can access your financial details"/>
+    <FaqLayout question="Why should I use it ?" answer="Ans:-Bill-Splitter can help you to track your daily expenses and make you worry free about group expenses. "/>
+    <FaqLayout question="How do I contact support team ?" answer="Ans:-You can reach us through email, phone or through post office. Any time, any day"/>
     </div>
     </div>
 }
