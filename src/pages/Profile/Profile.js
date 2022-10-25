@@ -93,12 +93,15 @@ function Profile() {
               <hr className={style.hr} />
               <h1 className={style.recent_pay_head}>Recent payment info</h1>
             </div>
-            {
-              payment_data.map((ele) => {
-                return (<div className={style.data_box} onClick={()=>{
-                  navigate("/expence")
-                  //also pass group name in navigate for fetch info of group
-                }}>
+            {payment_data.map((ele) => {
+              return (
+                <div
+                  className={style.data_box}
+                  onClick={() => {
+                    navigate("/expense/group?groupname=" + ele.group);
+                    //also pass group name in navigate for fetch info of group
+                  }}
+                >
                   <div className={style.img}>
                     <img
                       src="check.jpg"

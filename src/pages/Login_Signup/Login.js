@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "../../styles/login.css";
+import { useNavigate } from "react-router-dom";
 
 function Login() {
+  const navigate = useNavigate();
   const [email, setemail] = useState("");
   const [password, setpassword] = useState("");
   const [valid, setValid] = useState("d-none");
@@ -20,7 +22,7 @@ function Login() {
         .post(url, info)
         .then(() => {
           setValid("d-none");
-          window.alert("Success");
+          navigate("/profile");
           setLoading(false);
         })
         .catch((e) => {
