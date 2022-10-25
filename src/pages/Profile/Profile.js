@@ -38,9 +38,9 @@ function Profile() {
             <hr className={style.hr} />
             <h1 className={style.friends_head}>Friends</h1>
 
-            {friends_data.map((ele) => {
+            {friends_data.map((ele, i) => {
               return (
-                <div className={style.data_box}>
+                <div key={i} className={style.data_box}>
                   <div className={style.img}>
                     <img
                       src="dummy.jpg"
@@ -93,9 +93,10 @@ function Profile() {
               <hr className={style.hr} />
               <h1 className={style.recent_pay_head}>Recent payment info</h1>
             </div>
-            {payment_data.map((ele) => {
+            {payment_data.map((ele, i) => {
               return (
                 <div
+                  key={i}
                   className={style.data_box}
                   onClick={() => {
                     navigate("/expense/group?groupname=" + ele.group);
