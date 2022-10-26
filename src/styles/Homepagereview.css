@@ -24,3 +24,93 @@
     color: rgb(36, 47, 155);
     font-size: larger;
 }
+
+
+.footer-div {
+    padding: 30px 0px;
+    font-family: 'Play', sans-serif;
+    text-align: center;
+}
+
+.footer-div .logo {
+    width: 100%;
+    margin: 1% 0%;
+    padding: 0.6% 0%;
+    color: black;
+    font-size: 0.8em;
+}
+
+.footer-div .logo a {
+    color: black;
+}
+
+
+.footer-div .logo a:hover {
+    color: #fff;
+}
+
+.footer-div .row a:hover {
+    color: #fff;
+}
+
+.footer-div .logo a i {
+    font-size: 2em;
+    margin: 10px;
+}
+
+.footer-div .logo a {
+    text-decoration: none;
+    color: black;
+    transition: 0.5s;
+}
+
+.footer-div .row a {
+    text-decoration: none;
+    color: black;
+    transition: 0.5s;
+}
+
+.footer-div .row ul {
+    width: 100%;
+}
+
+.footer-div .row ul li {
+    display: inline-block;
+    margin: 0px 30px;
+}
+
+@media (max-width:720px) {
+    .footer-div {
+        text-align: left;
+        padding: 5%;
+    }
+
+    .footer-div .row ul li {
+        display: block;
+        margin: 10px 0px;
+        text-align: left;
+    }
+
+    .footer-div .logo a i {
+        margin: 0% 3%;
+    }
+}
+
+.footer-div .logo {
+    margin: 20px;
+}
+
+.footer-div .row {
+    margin: 35px;
+}
+
+.footer-div .copyright {
+    margin: 20px;
+}
+
+#hrTag {
+    width: 100%;
+}
+.footer-div{
+    padding-top: 25vh;
+}

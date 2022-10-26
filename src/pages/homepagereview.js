@@ -2,6 +2,8 @@ import React from "react";
 import "../styles/Homepagereview.css"
 
 
+
+
 function Review() {
     return (
         <>
@@ -70,6 +72,32 @@ function Review() {
                 </div>
             </div>
         </div>
+        <footer className="px-4">
+        <div className="footer-div">
+
+          
+            <i className="fab fa-instagram">
+                <span style={{ marginLeft: "10px" }}>
+
+                </span>
+              </i>
+            <div className="row">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact us</a></li>
+                    <li><a href="../faq">FAQ</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+
+            <div className="copyright">
+                Bill Splitter Copyright © 2022 GDSC - All rights reserved
+            </div>
+
+        </div>
+    </footer>
+
     </section>
         </>
     );
