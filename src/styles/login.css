@@ -1,7 +1,7 @@
 #customsection {
   min-height: 100vh;
   background: #fff;
-  /* background: linear-gradient(45deg, rgba(9, 9, 121, 1) 0%, rgba(57, 57, 180, 0.9738489145658263) 22%, rgba(121, 153, 199, 1) 51%, rgba(57, 57, 180, 0.9738489145658263) 77%, rgba(9, 9, 121, 1) 100%); */
+  background: linear-gradient(45deg, rgba(9, 9, 121, 1) 0%, rgba(57, 57, 180, 0.9738489145658263) 22%, rgba(121, 153, 199, 1) 51%, rgba(57, 57, 180, 0.9738489145658263) 77%, rgba(9, 9, 121, 1) 100%);
 }
 
 #customcard {
