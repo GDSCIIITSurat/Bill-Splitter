@@ -43,7 +43,7 @@
             }
             else if(res.status === 201){
               window.alert("Registration successfully completed.");
-              window.location.replace("login.html");
+              window.location.assign("/profile/profile.html")
             }
             else{
               window.alert("error");

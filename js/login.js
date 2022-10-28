@@ -25,7 +25,9 @@ const PostInfo = async (info) => {
 
       }
       else if (res.status === 200) {
-        window.alert(res.statusText);
+        // window.alert(res.statusText);
+        document.getElementById("button").disabled = false;
+        window.location.assign("/profile/profile.html")
       }
       else if (res.status === 400) {
         window.alert(res.statusText);
