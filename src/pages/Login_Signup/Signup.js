@@ -81,7 +81,7 @@ function Signup() {
         await axios
           .post(url, info)
           .then(() => {
-            navigate("/login");
+            navigate("/groups");
             setLoading(false);
           })
           .catch((e) => console.log(e));

@@ -1,22 +1,24 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const groups_details = [
   {
-    name: "Sed Gre",
+    name: "Room 102",
   },
   {
-    name: "Nasik trip",
+    name: "Nashik Trip",
   },
   {
-    name: "Goa trip",
+    name: "Goa Trip",
   },
 ];
 function Groups() {
+  const navigate = useNavigate();
   return (
     <div className="group-main">
       {groups_details.map((res) => {
         return (
-          <div className="group-box">
+          <div onClick={()=>navigate(`/expense/group?groupname=${res.name}`)} className="group-box">
             <div className="group-profile-box">
               <svg
                 width="50px"

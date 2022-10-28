@@ -22,7 +22,7 @@ function Login() {
         .post(url, info)
         .then(() => {
           setValid("d-none");
-          navigate("/profile");
+          navigate("/groups");
           setLoading(false);
         })
         .catch((e) => {

@@ -29,7 +29,7 @@ function Home() {
           ></path>
         </svg>
       </div>
-      <Groups />
+      <Groups/>
       <div className="bottom-box-add-expense">
         <div className="button">
           <svg

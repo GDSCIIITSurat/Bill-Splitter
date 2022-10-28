@@ -7,6 +7,7 @@ import Signup from "./pages/Login_Signup/Signup";
 import GrpExpenses from "./pages/Expenses/GrpExpenses";
 import ExpensePage from "./pages/ExpensePage";
 import FAQ from "./pages/FAQ";
+import Home from "./pages/Main_Home/Home";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/profile" element={<Profile />} />
           <Route path="/signup" element={<Signup />}></Route>
           <Route path="/expense/group" element={<GrpExpenses />} />
+          <Route path="/groups" element={<Home/>}/>
           {/* Go to path="/expense/group?groupname=Test%20Group" to see the output */}
           <Route path="/expense" element={<ExpensePage />} />
           <Route path="/faq" element={<FAQ />} />
